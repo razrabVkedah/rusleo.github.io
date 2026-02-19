@@ -1,89 +1,172 @@
 <!doctype html>
-<html lang="ru" class="page">
+<html lang="en" class="page">
 <head class="page__head">
     <meta charset="utf-8" class="page__meta">
     <meta name="viewport" content="width=device-width, initial-scale=1" class="page__meta">
-    <title class="page__title">Rusleo — Unity Developer / VFX</title>
-    <link rel="stylesheet" href="styles.css" class="page__css">
+    <meta name="description" content="Rusleo — Unity Developer / VFX. Projects, code, games, links." class="page__meta">
+    <title class="page__title">Rusleo — Portfolio</title>
+
+    <link rel="stylesheet" href="css/base.css" class="page__css">
+    <link rel="stylesheet" href="css/components.css" class="page__css">
 </head>
 
 <body class="page__body">
 <header class="site-header">
     <div class="container">
-        <div class="hero">
-            <p class="hero__kicker">Unity Developer • VFX Artist</p>
-            <h1 class="hero__title">Rusleo</h1>
-            <p class="hero__subtitle">
-                Портфолио: проекты, эффекты, ссылки на GitHub / ArtStation / Yandex Games.
-            </p>
+        <div class="topbar">
+            <a class="brand" href="#top">
+                <span class="brand__dot"></span>
+                <span class="brand__name">Rusleo</span>
+            </a>
 
-            <div class="hero__actions">
-                <a class="btn btn--primary" href="#projects">Projects</a>
-                <a class="btn btn--ghost" href="#links">Links</a>
+            <nav class="nav">
+                <a class="nav__link" href="#games" data-i18n="nav.games">Games</a>
+                <a class="nav__link" href="#vfx" data-i18n="nav.vfx">VFX</a>
+                <a class="nav__link" href="#code" data-i18n="nav.code">Code</a>
+                <a class="nav__link" href="#about" data-i18n="nav.about">About</a>
+                <a class="nav__link" href="#contact" data-i18n="nav.contact">Contact</a>
+            </nav>
+
+            <div class="topbar__actions">
+                <button class="lang-toggle" type="button" aria-label="Toggle language">
+                    <span class="lang-toggle__label">EN</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="hero" id="top">
+            <div class="hero__left">
+                <p class="hero__kicker" data-i18n="hero.kicker">Unity Developer • VFX Artist</p>
+                <h1 class="hero__title" data-i18n="hero.title">Portfolio</h1>
+                <p class="hero__subtitle" data-i18n="hero.subtitle">
+                    Unity systems, WebGL production, VFX — with a clean engineering approach.
+                </p>
+
+                <div class="hero__cta">
+                    <a class="btn btn--primary" href="#games" data-i18n="hero.ctaPrimary">See projects</a>
+                    <a class="btn btn--ghost" href="#contact" data-i18n="hero.ctaSecondary">Contact</a>
+                </div>
+
+                <div class="quick-links" id="quickLinks"></div>
+            </div>
+
+            <div class="hero__right">
+                <div class="profile-card">
+                    <div class="profile-card__avatar" aria-hidden="true"></div>
+                    <div class="profile-card__body">
+                        <p class="profile-card__name">Rusleo</p>
+                        <p class="profile-card__role" data-i18n="hero.role">Unity Developer / VFX</p>
+                        <div class="profile-card__facts">
+                            <span class="pill" data-i18n="hero.fact1">WebGL shipping</span>
+                            <span class="pill" data-i18n="hero.fact2">URP / VFX</span>
+                            <span class="pill" data-i18n="hero.fact3">Gameplay systems</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__glow" aria-hidden="true"></div>
             </div>
         </div>
     </div>
 </header>
 
 <main class="site-main">
-    <section class="section" id="projects">
+    <section class="section" id="games">
         <div class="container">
             <div class="section-head">
-                <h2 class="section-head__title">Projects</h2>
+                <h2 class="section-head__title" data-i18n="sections.games">Games</h2>
+                <p class="section-head__sub" data-i18n="sections.gamesSub">Published on Yandex Games. New & legacy releases.</p>
             </div>
 
-            <div class="grid">
-                <article class="card">
-                    <h3 class="card__title">Project name</h3>
-                    <p class="card__text">Короткое описание: что сделал, стек, результат.</p>
-                    <div class="card__meta">
-                        <span class="tag">Unity</span>
-                        <span class="tag">URP</span>
-                        <span class="tag">WebGL</span>
-                    </div>
-                    <div class="card__actions">
-                        <a class="link" href="#" target="_blank" rel="noreferrer">Demo</a>
-                        <a class="link" href="#" target="_blank" rel="noreferrer">GitHub</a>
-                        <a class="link" href="#" target="_blank" rel="noreferrer">Video</a>
-                    </div>
-                </article>
+            <div class="tabs" id="gamesTabs">
+                <button class="tabs__btn is-active" type="button" data-tab="new" data-i18n="tabs.new">New</button>
+                <button class="tabs__btn" type="button" data-tab="legacy" data-i18n="tabs.legacy">Legacy</button>
+            </div>
 
-                <article class="card">
-                    <h3 class="card__title">VFX pack</h3>
-                    <p class="card__text">Подборка эффектов: шейдеры/частицы/спрайты.</p>
-                    <div class="card__meta">
-                        <span class="tag">VFX</span>
-                        <span class="tag">Particles</span>
-                        <span class="tag">ShaderGraph</span>
+            <div class="cards-grid" id="gamesGrid"></div>
+        </div>
+    </section>
+
+    <section class="section" id="vfx">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-head__title" data-i18n="sections.vfx">VFX</h2>
+                <p class="section-head__sub" data-i18n="sections.vfxSub">Short shots and experiments on ArtStation.</p>
+            </div>
+
+            <div class="split">
+                <div class="panel">
+                    <h3 class="panel__title" data-i18n="vfx.title">ArtStation portfolio</h3>
+                    <p class="panel__text" data-i18n="vfx.text">
+                        VFX focused work. More reels will be added over time.
+                    </p>
+                    <a class="btn btn--primary" href="#" target="_blank" rel="noreferrer" id="artstationBtn">
+                        ArtStation
+                    </a>
+                </div>
+
+                <div class="panel panel--media">
+                    <div class="media-placeholder">
+                        <p class="media-placeholder__text" data-i18n="vfx.placeholder">
+                            Add a reel later (YouTube / mp4 poster).
+                        </p>
                     </div>
-                    <div class="card__actions">
-                        <a class="link" href="#" target="_blank" rel="noreferrer">ArtStation</a>
-                        <a class="link" href="#" target="_blank" rel="noreferrer">Video</a>
-                    </div>
-                </article>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="section" id="links">
+    <section class="section" id="code">
         <div class="container">
             <div class="section-head">
-                <h2 class="section-head__title">Links</h2>
+                <h2 class="section-head__title" data-i18n="sections.code">Code</h2>
+                <p class="section-head__sub" data-i18n="sections.codeSub">Reusable libraries and systems.</p>
             </div>
 
-            <div class="links">
-                <a class="link-card" href="#" target="_blank" rel="noreferrer">
-                    <span class="link-card__title">GitHub</span>
-                    <span class="link-card__sub">репозитории и код</span>
+            <div class="cards-grid" id="codeGrid"></div>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-head__title" data-i18n="sections.about">About</h2>
+            </div>
+
+            <div class="about">
+                <div class="about__panel">
+                    <p class="about__text" data-i18n="about.p1">
+                        Unity developer focused on production-ready systems: performance, architecture, tooling, and VFX.
+                    </p>
+                    <p class="about__text" data-i18n="about.p2">
+                        I publish WebGL games and build reusable modules that scale across projects.
+                    </p>
+                </div>
+
+                <div class="about__panel">
+                    <div class="skills" id="skills"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-head__title" data-i18n="sections.contact">Contact</h2>
+                <p class="section-head__sub" data-i18n="sections.contactSub">Fastest way: Telegram.</p>
+            </div>
+
+            <div class="contact">
+                <a class="contact-card" href="#" target="_blank" rel="noreferrer" id="telegramCard">
+                    <span class="contact-card__title">Telegram</span>
+                    <span class="contact-card__sub">@razrab_v_kedah</span>
                 </a>
-                <a class="link-card" href="#" target="_blank" rel="noreferrer">
-                    <span class="link-card__title">ArtStation</span>
-                    <span class="link-card__sub">VFX / шоты</span>
-                </a>
-                <a class="link-card" href="#" target="_blank" rel="noreferrer">
-                    <span class="link-card__title">Yandex Games</span>
-                    <span class="link-card__sub">паблиш и метрики</span>
-                </a>
+
+                <div class="contact-note">
+                    <p class="contact-note__text" data-i18n="contact.note">
+                        If you want a PDF CV block here later — we can add it.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -95,8 +178,11 @@
     </div>
 </footer>
 
-<script>
-    document.querySelector(".site-footer__year").textContent = String(new Date().getFullYear());
-</script>
+<script src="data/links.js"></script>
+<script src="data/projects.js"></script>
+<script src="data/text.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/render.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
