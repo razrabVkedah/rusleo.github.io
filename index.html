@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ru" class="page">
+<head class="page__head">
+    <meta charset="utf-8" class="page__meta">
+    <meta name="viewport" content="width=device-width, initial-scale=1" class="page__meta">
+    <title class="page__title">Rusleo — Unity Developer / VFX</title>
+    <link rel="stylesheet" href="styles.css" class="page__css">
+</head>
+
+<body class="page__body">
+<header class="site-header">
+    <div class="container">
+        <div class="hero">
+            <p class="hero__kicker">Unity Developer • VFX Artist</p>
+            <h1 class="hero__title">Rusleo</h1>
+            <p class="hero__subtitle">
+                Портфолио: проекты, эффекты, ссылки на GitHub / ArtStation / Yandex Games.
+            </p>
+
+            <div class="hero__actions">
+                <a class="btn btn--primary" href="#projects">Projects</a>
+                <a class="btn btn--ghost" href="#links">Links</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="site-main">
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-head__title">Projects</h2>
+            </div>
+
+            <div class="grid">
+                <article class="card">
+                    <h3 class="card__title">Project name</h3>
+                    <p class="card__text">Короткое описание: что сделал, стек, результат.</p>
+                    <div class="card__meta">
+                        <span class="tag">Unity</span>
+                        <span class="tag">URP</span>
+                        <span class="tag">WebGL</span>
+                    </div>
+                    <div class="card__actions">
+                        <a class="link" href="#" target="_blank" rel="noreferrer">Demo</a>
+                        <a class="link" href="#" target="_blank" rel="noreferrer">GitHub</a>
+                        <a class="link" href="#" target="_blank" rel="noreferrer">Video</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3 class="card__title">VFX pack</h3>
+                    <p class="card__text">Подборка эффектов: шейдеры/частицы/спрайты.</p>
+                    <div class="card__meta">
+                        <span class="tag">VFX</span>
+                        <span class="tag">Particles</span>
+                        <span class="tag">ShaderGraph</span>
+                    </div>
+                    <div class="card__actions">
+                        <a class="link" href="#" target="_blank" rel="noreferrer">ArtStation</a>
+                        <a class="link" href="#" target="_blank" rel="noreferrer">Video</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="links">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-head__title">Links</h2>
+            </div>
+
+            <div class="links">
+                <a class="link-card" href="#" target="_blank" rel="noreferrer">
+                    <span class="link-card__title">GitHub</span>
+                    <span class="link-card__sub">репозитории и код</span>
+                </a>
+                <a class="link-card" href="#" target="_blank" rel="noreferrer">
+                    <span class="link-card__title">ArtStation</span>
+                    <span class="link-card__sub">VFX / шоты</span>
+                </a>
+                <a class="link-card" href="#" target="_blank" rel="noreferrer">
+                    <span class="link-card__title">Yandex Games</span>
+                    <span class="link-card__sub">паблиш и метрики</span>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p class="site-footer__text">© <span class="site-footer__year"></span> Rusleo</p>
+    </div>
+</footer>
+
+<script>
+    document.querySelector(".site-footer__year").textContent = String(new Date().getFullYear());
+</script>
+</body>
+</html>
