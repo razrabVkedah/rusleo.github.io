@@ -73,7 +73,7 @@
         var data = [
             { title: "GitHub", href: links && links.githubProfile },
             { title: "ArtStation", href: links && links.artstation },
-            { title: "Yandex Games", href: "https://yandex.ru/games/" }
+            { title: "Yandex Games", href: links && links.yandexGames },
         ];
 
         data.forEach(d => {

@@ -16,9 +16,9 @@
             games: "Games",
             gamesSub: "Published on Yandex Games. New & legacy releases.",
             vfx: "VFX",
-            vfxSub: "Short shots and experiments on ArtStation.",
+            vfxSub: "Real-time VFX · Mobile-optimized · Production-ready",
             code: "Code",
-            codeSub: "Reusable libraries and systems.",
+            codeSub: "Reusable libraries and systems · Click to view on GitHub",
             about: "About",
             contact: "Contact",
             contactSub: "Fastest way: Telegram."
