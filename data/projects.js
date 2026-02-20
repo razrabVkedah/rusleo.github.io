@@ -82,5 +82,26 @@
         "VFX (Particles, ShaderGraph)",
         "Client-server (real-time)",
         "Tools & reusable modules"
-    ]
+    ],
 };
+
+window.projectsData.vfx = [
+    {
+        title: "Fire Impact VFX",
+        meta: "Unity • URP • Shader Graph",
+        thumb: "assets/img/VFX_Fire_0.png",
+        youtubeId: "v-npzKpGGV8"
+    },
+    {
+        title: "Healing Spell",
+        meta: "Particles • Custom Shader",
+        thumb: "assets/img/VFX_Heal_0.png",
+        youtubeId: "HFzsk558dPo"
+    },
+    {
+        title: "Thunder Strike",
+        meta: "Particles • Custom Shader",
+        thumb: "assets/img/VFX_Thunder_0.png",
+        youtubeId: "s4bNwzBxY3g"
+    }
+];

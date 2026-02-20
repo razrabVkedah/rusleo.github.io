@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c03a25ec-09bd-4b01-89af-584002935797" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/Ruslan_Unity_Developer_CV.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/VFX_Fire_0.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/base.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/components.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/components.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/text.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/text.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/projects.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/render.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/render.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +48,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\rusleo.github.io\assets\img" />
       <recent name="E:\rusleo.github.io\assets" />
     </key>
   </component>
@@ -69,7 +70,9 @@
       <workItem from="1771570776496" duration="525000" />
       <workItem from="1771571304086" duration="67000" />
       <workItem from="1771571374137" duration="1008000" />
-      <workItem from="1771591716341" duration="3146000" />
+      <workItem from="1771591716341" duration="3787000" />
+      <workItem from="1771595541804" duration="20000" />
+      <workItem from="1771595572729" duration="2015000" />
     </task>
     <servers />
   </component>
