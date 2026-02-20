@@ -1,0 +1,184 @@
+﻿.vfx {
+    padding: 100px 0;
+}
+
+.vfx__profile {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.vfx__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+}
+
+.vfx-card {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,122,0,0.15);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    text-decoration: none;
+}
+
+.vfx-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 30px rgba(255,122,0,0.35);
+}
+
+.vfx-card__media {
+    position: relative;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+}
+
+.vfx-card__thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.vfx-card__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent 60%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vfx-card__play {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255,122,0,0.85);
+    position: relative;
+}
+
+.vfx-card__play::before {
+    content: "";
+    position: absolute;
+    left: 22px;
+    top: 18px;
+    border-style: solid;
+    border-width: 12px 0 12px 18px;
+    border-color: transparent transparent transparent #000;
+}
+
+.vfx-card__body {
+    padding: 18px;
+}
+
+.vfx-card__title {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+.vfx-card__meta {
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+}
+
+.vfx-card__btn {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+.vfx-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: none;
+}
+
+.vfx-modal.is-open {
+    display: block;
+}
+
+.vfx-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.72);
+    backdrop-filter: blur(6px);
+}
+
+.vfx-modal__dialog {
+    position: relative;
+    width: min(980px, calc(100% - 32px));
+    margin: 70px auto;
+    border-radius: 18px;
+    border: 1px solid rgba(255,122,0,0.18);
+    background: rgba(10,12,18,0.96);
+    box-shadow: 0 24px 80px rgba(0,0,0,0.65);
+    overflow: hidden;
+}
+
+.vfx-modal__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.06);
+    cursor: pointer;
+    z-index: 2;
+}
+
+.vfx-modal__close::before,
+.vfx-modal__close::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 18px;
+    height: 2px;
+    background: rgba(255,255,255,0.88);
+    transform-origin: center;
+}
+
+.vfx-modal__close::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.vfx-modal__close::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.vfx-modal__frame {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: rgba(0,0,0,0.6);
+}
+
+.vfx-modal__iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+@media (max-width: 320px) {
+    .vfx {
+        padding: 60px 0;
+    }
+
+    .vfx-card__title {
+        font-size: 16px;
+    }
+
+    .vfx-card__meta {
+        font-size: 13px;
+    }
+}

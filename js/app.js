@@ -105,6 +105,7 @@ function wireVfxModal() {
 }
 
 (() => {
+    lucide.createIcons();
     document.querySelector(".site-footer__year").textContent = String(new Date().getFullYear());
 
     var currentLang = window.i18n.init();
@@ -139,12 +140,12 @@ function wireVfxModal() {
     var codeGrid = document.getElementById("codeGrid");
     var skills = document.getElementById("skills");
 
-    window.render.mountList(gamesGrid, window.projectsData.games.new);
+    window.render.mountGamesGrid(gamesGrid, window.projectsData.games.new);
     window.render.mountList(codeGrid, window.projectsData.code);
     window.render.mountSkills(skills, window.projectsData.skills);
     renderVfxModalSection();
-
     var tabs = document.getElementById("gamesTabs");
+    if (!tabs) return;
     var btns = tabs.querySelectorAll(".tabs__btn");
 
     btns.forEach(btn => {
@@ -154,10 +155,10 @@ function wireVfxModal() {
 
             var tab = btn.getAttribute("data-tab");
             if (tab === "legacy") {
-                window.render.mountList(gamesGrid, window.projectsData.games.legacy);
+                window.render.mountGamesGrid(gamesGrid, window.projectsData.games.legacy);
                 return;
             }
-            window.render.mountList(gamesGrid, window.projectsData.games.new);
+            window.render.mountGamesGrid(gamesGrid, window.projectsData.games.new);
         });
     });
 })();

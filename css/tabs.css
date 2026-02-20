@@ -1,0 +1,41 @@
+﻿.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.tabs__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 14px;
+    border: 1px solid var(--stroke);
+    background: var(--panel);
+    color: var(--text);
+    cursor: pointer;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.tabs__btn:hover {
+    border-color: rgba(255, 122, 0, 0.4);
+}
+
+.tabs__btn.is-active {
+    background: rgba(255, 122, 0, 0.12);
+    border-color: rgba(255, 122, 0, 0.6);
+    box-shadow: 0 0 14px rgba(255, 122, 0, 0.22);
+}
+
+.tabs__icon {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+    opacity: 0.7;
+    transition: opacity 0.2s ease, filter 0.2s ease;
+}
+
+.tabs__btn.is-active .tabs__icon {
+    opacity: 1;
+    filter: drop-shadow(0 0 6px rgba(255,122,0,0.6));
+}

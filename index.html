@@ -5,9 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" class="page__meta">
     <meta name="description" content="Rusleo — Unity Developer / VFX. Projects, code, games, links." class="page__meta">
     <title class="page__title">Rusleo — Portfolio</title>
-
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon.png">
     <link rel="stylesheet" href="css/base.css" class="page__css">
     <link rel="stylesheet" href="css/components.css" class="page__css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/brand.css">
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/tabs.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/effects/background.css">
+    <link rel="stylesheet" href="css/sections/hero.css">
+    <link rel="stylesheet" href="css/sections/vfx.css">
+    <link rel="stylesheet" href="css/sections/games.css">
+    <link rel="stylesheet" href="css/sections/contact.css">
 </head>
 
 <body class="page__body">
@@ -84,8 +94,15 @@
             </div>
 
             <div class="tabs" id="gamesTabs">
-                <button class="tabs__btn is-active" type="button" data-tab="new" data-i18n="tabs.new">New</button>
-                <button class="tabs__btn" type="button" data-tab="legacy" data-i18n="tabs.legacy">Legacy</button>
+                <button class="tabs__btn is-active" type="button" data-tab="new">
+                    <i data-lucide="flame" class="tabs__icon"></i>
+                    <span class="tabs__label">New</span>
+                </button>
+
+                <button class="tabs__btn" type="button" data-tab="legacy">
+                    <i data-lucide="archive" class="tabs__icon"></i>
+                    <span class="tabs__label">Legacy</span>
+                </button>
             </div>
 
             <div class="cards-grid" id="gamesGrid"></div>
@@ -196,6 +213,7 @@
     </div>
 </div>
 
+<script src="https://unpkg.com/lucide@latest"></script>
 <script src="data/links.js"></script>
 <script src="data/projects.js"></script>
 <script src="data/text.js"></script>
@@ -203,5 +221,7 @@
 <script src="js/render.js"></script>
 <script type="module" src="./proc-bg/index.js"></script>
 <script src="js/app.js"></script>
+<script>
+</script>
 </body>
 </html>

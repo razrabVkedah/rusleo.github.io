@@ -1,0 +1,20 @@
+﻿.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--text);
+}
+
+.brand__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    box-shadow: 0 10px 30px rgba(255, 122, 24, 0.25);
+}
+
+.brand__name {
+    font-weight: 800;
+    letter-spacing: 0.02em;
+}

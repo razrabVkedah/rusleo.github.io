@@ -2,12 +2,13 @@
     games: {
         new: [
             {
-                title: "Line of Fire",
+                title: "Fire Line",
                 subtitle: "Yandex Games • New release",
-                tags: ["Unity", "WebGL", "Shooter"],
+                tags: ["Unity", "WebGL", "FPS", "Addressables"],
                 href: "https://yandex.ru/games/app/liniia-ognia-482056",
                 metrics: ["Release: 2026", "Active build"],
-                cover: ""
+                status: "NEW",
+                cover: "/assets/img/fireline_cover.png"
             }
         ],
         legacy: [
@@ -17,7 +18,8 @@
                 tags: ["Unity", "WebGL", "Arcade"],
                 href: "https://yandex.ru/games/app/212262",
                 metrics: ["~600k players", "Published"],
-                cover: ""
+                status: "600K",
+                cover: "/assets/img/shooter_equipment.png"
             },
             {
                 title: "Legacy project #1",
@@ -25,7 +27,7 @@
                 tags: ["Unity", "WebGL"],
                 href: "https://yandex.ru/games/app/254990",
                 metrics: [],
-                cover: ""
+                cover: "/assets/img/sniper_africa.png"
             },
             {
                 title: "Legacy project #2",
@@ -33,7 +35,7 @@
                 tags: ["Unity", "WebGL"],
                 href: "https://yandex.ru/games/app/196367",
                 metrics: [],
-                cover: ""
+                cover: "/assets/img/sniper_bottles.png"
             },
             {
                 title: "Legacy project #3",
@@ -41,7 +43,7 @@
                 tags: ["Unity", "WebGL"],
                 href: "https://yandex.ru/games/app/225332",
                 metrics: [],
-                cover: ""
+                cover: "/assets/img/sniper_dino.png"
             },
             {
                 title: "Legacy project #4",
@@ -49,7 +51,7 @@
                 tags: ["Unity", "WebGL"],
                 href: "https://yandex.ru/games/app/223000",
                 metrics: [],
-                cover: ""
+                cover: "/assets/img/sniper_hunt.png"
             }
         ]
     },
