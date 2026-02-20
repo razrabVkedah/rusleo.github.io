@@ -144,11 +144,23 @@
 }
 
 .quick-links {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
-    margin-top: 14px;
 }
+
+@media (max-width: 768px) {
+    .quick-links {
+        position: static;
+        margin-top: 20px;
+        justify-content: в; /* можно center или flex-start */
+    }
+}
+
 
 .quick-link {
     text-decoration: none;
@@ -163,23 +175,36 @@
     border-color: rgba(255, 176, 0, 0.55);
 }
 
-.profile-card {
-    border-radius: var(--r);
-    border: 1px solid rgba(255, 255, 255, 0.10);
-    background: rgba(0, 0, 0, 0.22);
-    padding: 16px;
-    position: relative;
+.hero__right {
+    display: flex;
+    justify-content: flex-end; /* прижать вправо */
 }
 
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 10px 10px 10px auto;
+}
+
+
+
+
 .profile-card__avatar {
-    width: 100%;
-    height: 160px;
+    width: 320px;
+    height: 320px;
     border-radius: 18px;
     border: 1px solid rgba(255, 255, 255, 0.10);
-    background: radial-gradient(260px 140px at 30% 30%, rgba(255, 122, 24, 0.22), transparent 60%),
-    radial-gradient(260px 160px at 70% 60%, rgba(255, 176, 0, 0.14), transparent 60%),
-    rgba(255, 255, 255, 0.04);
+
+    background-image: url("../assets/img/avatar.png");
+    background-size: cover;
+    background-position: center top; /* ключевая строка */
+    background-repeat: no-repeat;
+
+    align-self: center;
 }
+
 
 .profile-card__name {
     margin: 12px 0 4px 0;
@@ -196,6 +221,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+
+    margin-top: 24px; /* регулируй значение */
 }
 
 .pill {

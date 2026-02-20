@@ -4,7 +4,7 @@
         hero: {
             kicker: "Unity Developer • VFX Artist",
             title: "Portfolio",
-            subtitle: "Unity systems, WebGL production, VFX — with a clean engineering approach.",
+            subtitle: "Unity systems, WebGL production and VFX — clean architecture, URP rendering, multiplayer integration and performance-oriented engineering.",
             ctaPrimary: "See projects",
             ctaSecondary: "Contact",
             role: "Unity Developer / VFX",
