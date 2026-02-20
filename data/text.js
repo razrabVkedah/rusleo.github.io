@@ -30,8 +30,9 @@
             placeholder: "Add a reel later (YouTube / mp4 poster)."
         },
         about: {
-            p1: "Unity developer focused on production-ready systems: performance, architecture, tooling, and VFX.",
-            p2: "I publish WebGL games and build reusable modules that scale across projects."
+            p1: "🛠 I take ownership of Unity projects end-to-end — from architecture setup and rendering configuration to production release and post-launch improvements.",
+            p2: "🤝 Experienced in leading teams, coordinating with backend developers, and building internal tools that improve workflows for designers and artists.",
+            p3: "🧩 My focus is long-term maintainability: clean structure, modular systems, and reusable components that remain stable as projects grow."
         },
         contact: {note: "If you want a PDF CV block here later — we can add it."}
     },
