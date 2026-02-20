@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2bcb53a1-0d05-4c6b-8fad-92ce652878ad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/js/bg.js" afterDir="false" />
+    <list default="true" id="c03a25ec-09bd-4b01-89af-584002935797" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/proc-bg/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proc-bg/renderer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proc-bg/shaders/fragment.glsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proc-bg/shaders/vertex.glsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proc-bg/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proc-bg/webgl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/base.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,52 +27,46 @@
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
-  <component name="ProjectId" id="39u3kzgJw4fR4rAiv2QoYqGHVIr" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectId" id="39vJnHRwjEH20H8sKOFA4jGofZh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/rusleo/Documents/GitHub/rusleo.github.io&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\rusleo.github.io\assets\img" />
-    </key>
-  </component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-164cda30dcd9-0af03a5fa574-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.26830.99" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.26574.96" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2bcb53a1-0d05-4c6b-8fad-92ce652878ad" name="Changes" comment="" />
-      <created>1771532276191</created>
+      <changelist id="c03a25ec-09bd-4b01-89af-584002935797" name="Changes" comment="" />
+      <created>1771570775449</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1771532276191</updated>
-      <workItem from="1771532277867" duration="14000" />
-      <workItem from="1771532303962" duration="961000" />
+      <updated>1771570775449</updated>
+      <workItem from="1771570776496" duration="525000" />
+      <workItem from="1771571304086" duration="67000" />
+      <workItem from="1771571374137" duration="1008000" />
     </task>
     <servers />
   </component>
