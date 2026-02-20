@@ -11,8 +11,16 @@
         langLabel.textContent = next.toUpperCase();
     });
 
-    document.getElementById("artstationBtn").href = window.linksData.artstation;
-    document.getElementById("telegramCard").href = window.linksData.telegram;
+    var artBtn = document.getElementById("artstationBtn");
+    if (artBtn && window.linksData && window.linksData.artstation) {
+        artBtn.href = window.linksData.artstation;
+    }
+
+    var tgCard = document.getElementById("telegramCard");
+    if (tgCard && window.linksData && window.linksData.telegram) {
+        tgCard.href = window.linksData.telegram;
+    }
+
 
     window.render.mountQuickLinks(document.getElementById("quickLinks"), window.linksData);
 

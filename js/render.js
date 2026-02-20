@@ -51,11 +51,13 @@
     }
 
     function mountList(container, items) {
+        if (!container) return;
         container.innerHTML = "";
-        items.forEach(it => container.appendChild(renderCard(it)));
+        (items || []).forEach(it => container.appendChild(renderCard(it)));
     }
 
     function mountSkills(container, items) {
+        if (!container) return;
         container.innerHTML = "";
         (items || []).forEach(s => {
             var pill = el("span", "pill");
@@ -65,15 +67,17 @@
     }
 
     function mountQuickLinks(container, links) {
+        if (!container) return;
         container.innerHTML = "";
 
         var data = [
-            {title: "GitHub", href: links.githubProfile},
-            {title: "ArtStation", href: links.artstation},
-            {title: "Yandex Games", href: "https://yandex.ru/games/"}
+            { title: "GitHub", href: links && links.githubProfile },
+            { title: "ArtStation", href: links && links.artstation },
+            { title: "Yandex Games", href: "https://yandex.ru/games/" }
         ];
 
         data.forEach(d => {
+            if (!d.href) return; // не рендерим пустые ссылки
             var a = el("a", "quick-link");
             a.href = d.href;
             a.target = "_blank";
