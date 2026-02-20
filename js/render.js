@@ -68,9 +68,9 @@
         container.innerHTML = "";
 
         var data = [
-            { title: "GitHub", href: links.githubProfile },
-            { title: "ArtStation", href: links.artstation },
-            { title: "Yandex Games", href: "https://yandex.ru/games/" }
+            {title: "GitHub", href: links.githubProfile},
+            {title: "ArtStation", href: links.artstation},
+            {title: "Yandex Games", href: "https://yandex.ru/games/"}
         ];
 
         data.forEach(d => {
@@ -83,5 +83,5 @@
         });
     }
 
-    return { mountList, mountSkills, mountQuickLinks };
+    return {mountList, mountSkills, mountQuickLinks};
 })();
