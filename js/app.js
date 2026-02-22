@@ -143,9 +143,13 @@ function wireVfxModal() {
     window.render.mountGamesGrid(gamesGrid, window.projectsData.games.new);
     window.render.mountList(codeGrid, window.projectsData.code);
     window.render.mountSkills(skills, window.projectsData.skills);
+
     renderVfxModalSection();
+    window.i18n.apply(window.i18n.get());
     var tabs = document.getElementById("gamesTabs");
-    if (!tabs) return;
+    if (!tabs) {
+        return;
+    }
     var btns = tabs.querySelectorAll(".tabs__btn");
 
     btns.forEach(btn => {
@@ -156,9 +160,12 @@ function wireVfxModal() {
             var tab = btn.getAttribute("data-tab");
             if (tab === "legacy") {
                 window.render.mountGamesGrid(gamesGrid, window.projectsData.games.legacy);
+                window.i18n.apply(window.i18n.get());
                 return;
             }
             window.render.mountGamesGrid(gamesGrid, window.projectsData.games.new);
+            window.i18n.apply(window.i18n.get());
         });
     });
+
 })();

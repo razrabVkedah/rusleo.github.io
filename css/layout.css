@@ -44,6 +44,45 @@
     color: rgba(255, 176, 0, 0.95);
 }
 
+@media (max-width: 560px) {
+    .topbar {
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 8px;
+        padding: 2px 2px;
+        max-width: 100%;
+    }
+
+    .nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav__link {
+        flex: 0 0 auto;
+        padding: 8px 10px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.10);
+        background: rgba(0, 0, 0, 0.18);
+        color: rgba(255, 255, 255, 0.88);
+    }
+
+    .nav__link:hover {
+        background: rgba(0, 0, 0, 0.26);
+        border-color: rgba(255, 255, 255, 0.16);
+        color: rgba(255, 176, 0, 0.95);
+        transform: none;
+    }
+}
+
 .split {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);

@@ -26,7 +26,6 @@
         return ul;
     }
 
-    // Текущая "универсальная" карточка — оставим под Code
     function renderCard(item) {
         var a = el("a", "card");
         a.href = item.href;
@@ -41,8 +40,12 @@
 
         var h = el("h3", "card__title");
         h.textContent = item.title;
+        if (item.titleTag)
+            h.setAttribute("data-i18n", item.titleTag);
 
         var p = el("p", "card__sub");
+        if (item.subtitleTag)
+            p.setAttribute("data-i18n", item.subtitleTag);
         p.textContent = item.subtitle || "";
 
         a.appendChild(h);
@@ -79,6 +82,8 @@
         if (item.status) {
             var badge = el("span", "game-card__badge");
             badge.textContent = item.status;
+            if (item.status)
+                badge.setAttribute("data-i18n", item.status);
             a.appendChild(badge);
         }
 
@@ -86,9 +91,11 @@
 
         var h = el("h3", "game-card__title");
         h.textContent = item.title || "Game";
+        if (item.titleTag) h.setAttribute("data-i18n", item.titleTag);
 
         var p = el("p", "game-card__sub");
         p.textContent = item.subtitle || "";
+        if (item.subtitleTag) p.setAttribute("data-i18n", item.subtitleTag);
 
         body.appendChild(h);
         body.appendChild(p);
@@ -139,21 +146,26 @@
         container.innerHTML = "";
 
         var data = [
-            {title: "GitHub", href: links && links.githubProfile},
-            {title: "ArtStation", href: links && links.artstation},
-            {title: "Yandex Games", href: links && links.yandexGames},
+            {title: "GitHub", href: links && links.githubProfile, i18n: "platforms.github"},
+            {title: "ArtStation", href: links && links.artstation, i18n: "platforms.artstation"},
+            {title: "Yandex Games", href: links && links.yandexGames, i18n: "platforms.yandexGames"},
+            {title: "YouTube", href: links && links.youtube, i18n: "platforms.youtube"}
         ];
 
         data.forEach(d => {
             if (!d.href) return;
+
             var a = el("a", "quick-link");
             a.href = d.href;
             a.target = "_blank";
             a.rel = "noreferrer";
+
+            if (d.i18n) a.setAttribute("data-i18n", d.i18n);
             a.textContent = d.title;
+
             container.appendChild(a);
         });
     }
 
-    return { mountList, mountGamesGrid, mountSkills, mountQuickLinks };
+    return {mountList, mountGamesGrid, mountSkills, mountQuickLinks};
 })();

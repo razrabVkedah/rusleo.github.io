@@ -1,9 +1,10 @@
 ﻿.vfx {
-    padding: 100px 0;
+    padding: 30px 30px;
 }
 
 .vfx__profile {
-    margin-bottom: 40px;
+    margin-top: 25px;
+    margin-bottom: 5px;
     text-align: center;
 }
 

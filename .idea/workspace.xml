@@ -4,26 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c03a25ec-09bd-4b01-89af-584002935797" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/css/brand.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/button.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/card.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/effects/background.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/layout.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/sections/contact.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/sections/games.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/sections/hero.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/sections/vfx.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/tabs.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/rusleo.github.io.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rusleo.github.io.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/components.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/components.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/projects.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/render.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/render.js" afterDir="false" />
-    </list>
+    <list default="true" id="c03a25ec-09bd-4b01-89af-584002935797" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,17 +38,10 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\rusleo.github.io\css" />
-      <recent name="E:\rusleo.github.io\assets\img" />
-      <recent name="E:\rusleo.github.io\assets" />
-    </key>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.222" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.26574.96" />
       </set>
     </attachedChunks>
   </component>
@@ -82,9 +56,7 @@
       <workItem from="1771570776496" duration="525000" />
       <workItem from="1771571304086" duration="67000" />
       <workItem from="1771571374137" duration="1008000" />
-      <workItem from="1771591716341" duration="3787000" />
-      <workItem from="1771595541804" duration="20000" />
-      <workItem from="1771595572729" duration="10966000" />
+      <workItem from="1771666231215" duration="13661000" />
     </task>
     <servers />
   </component>

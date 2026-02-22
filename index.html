@@ -31,9 +31,9 @@
             </a>
 
             <nav class="nav">
-                <a class="nav__link" href="#games" data-i18n="nav.games">Games</a>
-                <a class="nav__link" href="#vfx" data-i18n="nav.vfx">VFX</a>
                 <a class="nav__link" href="#code" data-i18n="nav.code">Code</a>
+                <a class="nav__link" href="#vfx" data-i18n="nav.vfx">VFX</a>
+                <a class="nav__link" href="#games" data-i18n="nav.games">Games</a>
                 <a class="nav__link" href="#about" data-i18n="nav.about">About</a>
                 <a class="nav__link" href="#contact" data-i18n="nav.contact">Contact</a>
             </nav>
@@ -85,30 +85,6 @@
 </header>
 
 <main class="site-main">
-    <section class="section" id="games">
-        <div class="container">
-            <div class="section-head">
-                <h2 class="section-head__title" data-i18n="sections.games">Games</h2>
-                <p class="section-head__sub" data-i18n="sections.gamesSub">Published on Yandex Games. New & legacy
-                    releases.</p>
-            </div>
-
-            <div class="tabs" id="gamesTabs">
-                <button class="tabs__btn is-active" type="button" data-tab="new">
-                    <i data-lucide="flame" class="tabs__icon"></i>
-                    <span class="tabs__label">New</span>
-                </button>
-
-                <button class="tabs__btn" type="button" data-tab="legacy">
-                    <i data-lucide="archive" class="tabs__icon"></i>
-                    <span class="tabs__label">Legacy</span>
-                </button>
-            </div>
-
-            <div class="cards-grid" id="gamesGrid"></div>
-        </div>
-    </section>
-
     <section class="section" id="code">
         <div class="container">
             <div class="section-head">
@@ -128,16 +104,41 @@
                     Real-time VFX experiments and production-ready shots.
                 </p>
             </div>
+            <div class="vfx__grid vfx-grid"></div>
             <div class="vfx__profile">
                 <a class="vfx__profile-link btn btn--primary"
                    id="artstationProfileBtn"
                    href="#"
                    target="_blank"
-                   rel="noreferrer">
+                   rel="noreferrer"
+                   data-i18n="vfx.view-all-button">
                     View Full ArtStation Profile
                 </a>
             </div>
-            <div class="vfx__grid vfx-grid"></div>
+        </div>
+    </section>
+
+    <section class="section" id="games">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-head__title" data-i18n="sections.games">Games</h2>
+                <p class="section-head__sub" data-i18n="sections.gamesSub">Published on Yandex Games. New & legacy
+                    releases.</p>
+            </div>
+
+            <div class="tabs" id="gamesTabs">
+                <button class="tabs__btn is-active" type="button" data-tab="new">
+                    <i data-lucide="flame" class="tabs__icon"></i>
+                    <span class="tabs__label" data-i18n="games.type.new">New</span>
+                </button>
+
+                <button class="tabs__btn" type="button" data-tab="legacy">
+                    <i data-lucide="archive" class="tabs__icon"></i>
+                    <span class="tabs__label" data-i18n="games.type.legacy">Legacy</span>
+                </button>
+            </div>
+
+            <div class="cards-grid" id="gamesGrid"></div>
         </div>
     </section>
 
@@ -150,16 +151,23 @@
             <div class="about">
                 <div class="about__panel">
                     <p class="about__text" data-i18n="about.p1">
-                        🛠 I take ownership of Unity projects end-to-end — from architecture setup and rendering
-                        configuration to production release and post-launch improvements.
+                        Middle+ Unity Developer with 4+ years of experience building scalable gameplay systems and
+                        production-ready pipelines. I take full ownership of the Unity client — from architecture setup
+                        and URP configuration to release and post-launch improvements.
                     </p>
                     <p class="about__text" data-i18n="about.p2">
-                        🤝 Experienced in leading teams, coordinating with backend developers, and building internal
-                        tools that improve workflows for designers and artists.
+                        Strong in C# and clean, interface-based architecture (SOLID, event-driven systems). I design
+                        modular systems that remain stable as projects grow, focusing on memory efficiency and
+                        performance optimization.
                     </p>
                     <p class="about__text" data-i18n="about.p3">
-                        🧩 My focus is long-term maintainability: clean structure, modular systems, and reusable
-                        components that remain stable as projects grow.
+                        Experienced with multiplayer (Photon, Mirror, custom TCP/UDP/RPC), SDK integrations (Firebase,
+                        Yandex Games, AppsFlyer, OneSignal), and backend interaction (ASP.NET Core, Node.js). I also
+                        build internal tools and custom editors to streamline team workflows.
+                    </p>
+                    <p class="about__text" data-i18n="about.p4">
+                        Rendering-focused developer: URP, Shader Graph, HLSL, VFX Graph, materials, and optimization for
+                        WebGL and mobile platforms.
                     </p>
                 </div>
             </div>
@@ -182,14 +190,14 @@
                 </a>
                 <a class="contact-card"
                    href="mailto:leonrusgamedev2004@yandex.ru?subject=Unity%20Collaboration">
-                    <span class="contact-card__title">Email</span>
+                    <span class="contact-card__title" data-i18n="contact.email">Email</span>
                     <span class="contact-card__sub">leonrusgamedev2004@yandex.ru</span>
                 </a>
                 <a class="contact-card contact-card--cv"
                    href="/assets/Ruslan_Unity_Developer_CV.pdf"
                    download>
-                    <span class="contact-card__title">Download CV</span>
-                    <span class="contact-card__sub">PDF • 0.11 MB</span>
+                    <span class="contact-card__title" data-i18n="contact.download-cv">Download CV</span>
+                    <span class="contact-card__sub" data-i18n="contact.cv-info">PDF • 0.11 MB</span>
                 </a>
 
             </div>
@@ -216,7 +224,8 @@
 <script src="https://unpkg.com/lucide@latest"></script>
 <script src="data/links.js"></script>
 <script src="data/projects.js"></script>
-<script src="data/text.js"></script>
+<script src="data/text-en.js"></script>
+<script src="data/text-ru.js"></script>
 <script src="js/i18n.js"></script>
 <script src="js/render.js"></script>
 <script type="module" src="./proc-bg/index.js"></script>
