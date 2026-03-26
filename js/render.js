@@ -149,7 +149,8 @@
             {title: "GitHub", href: links && links.githubProfile, i18n: "platforms.github"},
             {title: "ArtStation", href: links && links.artstation, i18n: "platforms.artstation"},
             {title: "Yandex Games", href: links && links.yandexGames, i18n: "platforms.yandexGames"},
-            {title: "YouTube", href: links && links.youtube, i18n: "platforms.youtube"}
+            {title: "YouTube", href: links && links.youtube, i18n: "platforms.youtube"},
+            {title: "Asset Store", href: links && links.assetStore, i18n: "platforms.assetStore"},
         ];
 
         data.forEach(d => {

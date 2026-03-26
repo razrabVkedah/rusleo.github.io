@@ -3,5 +3,6 @@
     artstation: "https://www.artstation.com/rusleo",
     yandexGames: "https://yandex.ru/games/developer/130251",
     youtube:"https://www.youtube.com/channel/UC12lnQ6n111ILMZH4fDU1zg",
-    telegram: "https://t.me/razrab_v_kedah"
+    telegram: "https://t.me/razrab_v_kedah",
+    assetStore:"https://assetstore.unity.com/publishers/138306"
 };
