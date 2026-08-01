@@ -59,32 +59,48 @@
     }
 
     function renderGameCard(item) {
-        var a = el("a", "game-card");
-        a.href = item.href || "#";
-        a.target = "_blank";
-        a.rel = "noreferrer";
+        var hasPlatformLinks = item.links && item.links.length > 0;
+        var card = el(hasPlatformLinks ? "article" : "a", "game-card");
+        if (!hasPlatformLinks) {
+            card.href = item.href || "#";
+            card.target = "_blank";
+            card.rel = "noreferrer";
+        }
 
         var media = el("div", "game-card__media");
+        var slides = Array.isArray(item.slides) && item.slides.length > 0
+            ? item.slides
+            : (item.cover ? [item.cover] : []);
 
-        if (item.cover) {
-            var img = el("img", "game-card__cover");
-            img.src = item.cover;
-            img.alt = item.title || "Game";
-            img.loading = "lazy";
-            media.appendChild(img);
+        if (slides.length > 0) {
+            slides.forEach((src, index) => {
+                var img = el("img", "game-card__cover");
+                img.src = src;
+                img.alt = (item.title || "Game") + " — screenshot " + (index + 1);
+                img.loading = index === 0 ? "eager" : "lazy";
+                if (slides.length > 1) {
+                    img.classList.add("game-card__cover--slide");
+                    if (index === 0) img.classList.add("is-active");
+                }
+                media.appendChild(img);
+            });
+
+            if (slides.length > 1) {
+                mountSlideshow(media, card, slides.length);
+            }
         } else {
             var ph = el("div", "game-card__cover game-card__cover--placeholder");
             media.appendChild(ph);
         }
 
-        a.appendChild(media);
+        card.appendChild(media);
 
         if (item.status) {
             var badge = el("span", "game-card__badge");
             badge.textContent = item.status;
             if (item.status)
                 badge.setAttribute("data-i18n", item.status);
-            a.appendChild(badge);
+            card.appendChild(badge);
         }
 
         var body = el("div", "game-card__body");
@@ -114,9 +130,115 @@
             body.appendChild(metrics);
         }
 
-        a.appendChild(body);
+        if (hasPlatformLinks) {
+            var actions = el("div", "game-card__actions");
+            item.links.forEach(link => {
+                var platformLink = el("a", "game-card__link");
+                platformLink.href = link.href;
+                platformLink.target = "_blank";
+                platformLink.rel = "noreferrer";
+                platformLink.textContent = link.title;
+                actions.appendChild(platformLink);
+            });
+            body.appendChild(actions);
+        }
 
-        return a;
+        card.appendChild(body);
+
+        return card;
+    }
+
+    function mountSlideshow(media, card, slidesCount) {
+        var currentIndex = 0;
+        var slideImages = media.querySelectorAll(".game-card__cover--slide");
+        var controls = el("div", "game-card__slider-controls");
+        var dots = el("div", "game-card__slider-dots");
+        var previous = el("button", "game-card__slider-arrow game-card__slider-arrow--previous");
+        var next = el("button", "game-card__slider-arrow game-card__slider-arrow--next");
+
+        previous.type = "button";
+        previous.setAttribute("aria-label", "Previous screenshot");
+        previous.textContent = "‹";
+        next.type = "button";
+        next.setAttribute("aria-label", "Next screenshot");
+        next.textContent = "›";
+
+        function showSlide(index) {
+            currentIndex = (index + slidesCount) % slidesCount;
+            slideImages.forEach((slide, slideIndex) => {
+                slide.classList.toggle("is-active", slideIndex === currentIndex);
+            });
+            dots.querySelectorAll(".game-card__slider-dot").forEach((dot, dotIndex) => {
+                var isActive = dotIndex === currentIndex;
+                dot.classList.toggle("is-active", isActive);
+                dot.setAttribute("aria-current", isActive ? "true" : "false");
+            });
+        }
+
+        for (var index = 0; index < slidesCount; index += 1) {
+            var dot = el("button", "game-card__slider-dot");
+            dot.type = "button";
+            dot.setAttribute("aria-label", "Show screenshot " + (index + 1));
+            dot.dataset.slideIndex = String(index);
+            if (index === 0) {
+                dot.classList.add("is-active");
+                dot.setAttribute("aria-current", "true");
+            }
+            dot.addEventListener("click", event => {
+                event.preventDefault();
+                event.stopPropagation();
+                showSlide(Number(event.currentTarget.dataset.slideIndex));
+                restartAutoplay();
+            });
+            dots.appendChild(dot);
+        }
+
+        previous.addEventListener("click", event => {
+            event.preventDefault();
+            event.stopPropagation();
+            showSlide(currentIndex - 1);
+            restartAutoplay();
+        });
+        next.addEventListener("click", event => {
+            event.preventDefault();
+            event.stopPropagation();
+            showSlide(currentIndex + 1);
+            restartAutoplay();
+        });
+
+        controls.appendChild(previous);
+        controls.appendChild(dots);
+        controls.appendChild(next);
+        media.appendChild(controls);
+
+        var autoplayId = null;
+
+        function startAutoplay() {
+            if (autoplayId !== null) return;
+            autoplayId = window.setInterval(() => {
+                if (!card.isConnected) {
+                    window.clearInterval(autoplayId);
+                    autoplayId = null;
+                    return;
+                }
+                showSlide(currentIndex + 1);
+            }, 3500);
+        }
+
+        function stopAutoplay() {
+            if (autoplayId === null) return;
+            window.clearInterval(autoplayId);
+            autoplayId = null;
+        }
+
+        function restartAutoplay() {
+            stopAutoplay();
+            startAutoplay();
+        }
+
+        card.addEventListener("focusin", stopAutoplay);
+        card.addEventListener("focusout", startAutoplay);
+        startAutoplay();
     }
 
     function mountList(container, items) {

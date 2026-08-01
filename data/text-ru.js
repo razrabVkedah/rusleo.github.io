@@ -17,7 +17,7 @@ window.textData.ru = {
     },
     sections: {
         games: "Игры",
-        gamesSub: "Публикации на Яндекс Играх. Новые и старые релизы.",
+        gamesSub: "Игры, выпущенные на Яндекс Играх, RuStore и CrazyGames.",
         vfx: "VFX",
         vfxSub: "Real-time VFX · Мобильная оптимизация · Production-ready",
         code: "Код",
@@ -69,8 +69,8 @@ window.textData.ru = {
         },
         new: {
             fireline: {
-                title: "Линия Огня",
-                subtitle: "Яндекс Игры • Релиз 2026",
+                title: "Огневой рубеж: Зомби",
+                subtitle: "Защищай позицию от наступающих волн зомби.",
             }
         },
         legacy: {

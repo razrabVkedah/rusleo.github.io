@@ -2,15 +2,35 @@
     games: {
         new: [
             {
-                title: "Fire Line",
+                title: "Fireline: Zombies",
                 titleTag: "games.new.fireline.title",
-                subtitle: "Yandex Games • New release",
+                subtitle: "Defend your position against waves of zombies.",
                 subtitleTag: "games.new.fireline.subtitle",
-                tags: ["Unity", "WebGL", "FPS", "Addressables"],
-                href: "https://yandex.ru/games/app/liniia-ognia-482056",
+                tags: ["Unity", "Android", "WebGL", "FPS"],
+                links: [
+                    {
+                        title: "RuStore",
+                        href: "https://rustore.ru/catalog/app/com.rusleo.firelinezombies"
+                    },
+                    {
+                        title: "CrazyGames",
+                        href: "https://www.crazygames.com/game/fireline-zombies"
+                    }
+                ],
                 metrics: [],
                 status: "games.status.new",
-                cover: "/assets/img/fireline_cover.png"
+                cover: "/assets/img/fireline-zombies/1.webp",
+                slides: [
+                    "/assets/img/fireline-zombies/1.webp",
+                    "/assets/img/fireline-zombies/2.webp",
+                    "/assets/img/fireline-zombies/3.webp",
+                    "/assets/img/fireline-zombies/4.webp",
+                    "/assets/img/fireline-zombies/5.webp",
+                    "/assets/img/fireline-zombies/6.webp",
+                    "/assets/img/fireline-zombies/7.webp",
+                    "/assets/img/fireline-zombies/8.webp",
+                    "/assets/img/fireline-zombies/9.webp"
+                ]
             }
         ],
         legacy: [

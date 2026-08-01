@@ -17,7 +17,7 @@ window.textData.en = {
     },
     sections: {
         games: "Games",
-        gamesSub: "Published on Yandex Games. New & legacy releases.",
+        gamesSub: "Games released on Yandex Games, RuStore, and CrazyGames.",
         vfx: "VFX",
         vfxSub: "Real-time VFX · Mobile-optimized · Production-ready",
         code: "Code",
@@ -69,8 +69,8 @@ window.textData.en = {
         },
         new: {
             fireline: {
-                title: "Fire Line",
-                subtitle: "Yandex Games • Release 2026",
+                title: "Fireline: Zombies",
+                subtitle: "Defend your position against waves of zombies.",
             }
         },
         legacy: {
