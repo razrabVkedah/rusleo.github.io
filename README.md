@@ -24,6 +24,14 @@ Open `http://127.0.0.1:8765/`.
 
 The older CSS files, renderer, project catalog and procedural-background sources are not loaded by this version. Their historical asset paths may no longer exist: unused legacy images and redundant originals have been removed from the working tree and remain available in Git history. The PDF is unchanged. Ignored local files are excluded from asset cleanup.
 
+## Game archive
+
+`archive/index.html` is a separate bilingual gallery linked from the main footer. It loads `css/archive.css` and `data/archive-text.js` only on navigation to `/archive/`, and reuses the site's language and media-dialog code. English descriptions are also present in the HTML for no-JavaScript browsing.
+
+Nine games have compact WebP thumbnails (about 175 KB combined); all 23 larger gallery images are loaded on demand. The complete archive image directory is about 1 MB. None of these images or archive-specific files are requested by the main page. Descriptions are based on the supplied game PDFs; no release dates or audience figures are inferred.
+
+Original ZIP builds, PDFs and PNGs stay in the ignored `_temp/archieves/` directory. There are no game players or SDK adapters in this implementation. When demos are ready, host their builds separately and add explicit play links to the archive cards. Do not copy game payloads into this portfolio repository.
+
 ## Content boundaries
 
 Chromble and Fireline are independent solo projects. Chromble links to Yandex Games; Fireline links to RuStore. The removed CrazyGames listing is no longer linked. No unconfirmed release date, performance metric or audience count is claimed. Bulltraffic is described through the confirmed Unity responsibilities and permitted VFX; confidential project footage is not included. Public code examples include their relevant implementation limits.

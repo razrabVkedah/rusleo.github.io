@@ -1,0 +1,36 @@
+/* Loaded only on /archive/. */
+.archive-intro { padding-top: 64px; }
+.archive-intro > .eyebrow { color: var(--accent); }
+.archive-intro h1 { font-size: clamp(56px, 7vw, 96px); letter-spacing: -.06em; margin: 22px 0 26px; }
+.archive-lead { max-width: 690px; font-size: 20px; color: var(--muted); line-height: 1.6; }
+.archive-index { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; margin-top: 48px; padding-block: 20px; border-top: 1px solid var(--line); }
+.archive-index .eyebrow { flex-shrink: 0; color: var(--accent); }
+.archive-index p { font-size: 12px; color: var(--muted); }
+.archive-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px 28px; padding-top: 12px; }
+.archive-card { min-width: 0; }
+.archive-card .project-media { display: flex; flex-direction: column; height: 100%; }
+.archive-cover { width: 100%; }
+.archive-cover img { aspect-ratio: 16 / 9; object-fit: contain; background: var(--panel); }
+.archive-card-meta { display: flex; justify-content: space-between; gap: 10px; margin: 20px 0 12px; }
+.archive-card-meta .eyebrow { font-size: 10px; letter-spacing: .06em; }
+.archive-card h2 { font-size: 26px; letter-spacing: -.035em; line-height: 1.15; }
+.archive-description { color: var(--muted); font-size: 14px; line-height: 1.7; margin-top: 14px; margin-bottom: 20px; }
+.archive-gallery { margin-top: auto; padding-block: 10px; align-self: start; }
+.archive-image-count { color: var(--muted); padding-inline: 5px; font: 11px Consolas, monospace; }
+.archive-return { margin-top: 64px; padding-block: 28px; border-top: 1px solid var(--line); }
+@media (max-width: 1000px) {
+    .archive-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .archive-index { align-items: start; }
+    .archive-index p { max-width: 430px; }
+}
+@media (max-width: 600px) {
+    .archive-intro { padding-top: 34px; }
+    .archive-intro h1 { font-size: 52px; margin-block: 18px; }
+    .archive-lead { font-size: 16px; }
+    .archive-index { display: block; margin-top: 28px; }
+    .archive-index p { margin-top: 10px; }
+    .archive-grid { grid-template-columns: 1fr; gap: 32px; }
+    .archive-card h2 { font-size: 28px; }
+    .archive-card-meta { margin-top: 16px; }
+    .archive-return { margin-top: 36px; }
+}

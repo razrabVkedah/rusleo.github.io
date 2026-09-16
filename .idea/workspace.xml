@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c03a25ec-09bd-4b01-89af-584002935797" name="Changes" comment="" />
+    <list default="true" id="c03a25ec-09bd-4b01-89af-584002935797" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/text-en.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/text-en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/text-ru.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/text-ru.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,7 +36,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "E:/rusleo.github.io/_temp/chromble",
+    "last_opened_file_path": "E:/rusleo.github.io/_temp/archieves",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -42,14 +48,17 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\rusleo.github.io\_temp\archieves" />
       <recent name="E:\rusleo.github.io\_temp\chromble" />
       <recent name="E:\rusleo.github.io\_temp" />
       <recent name="E:\rusleo.github.io\assets\img\fireline-zombies" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\rusleo.github.io\_temp\zombie" />
-      <recent name="E:\rusleo.github.io\_temp\chromble" />
-      <recent name="E:\rusleo.github.io\assets\img\fireline-zombies" />
+      <recent name="E:\rusleo.github.io\_temp\archieves\pump" />
+      <recent name="E:\rusleo.github.io\_temp\archieves\gun" />
+      <recent name="E:\rusleo.github.io\_temp\archieves\hunt" />
+      <recent name="E:\rusleo.github.io\_temp\archieves\dino" />
+      <recent name="E:\rusleo.github.io\_temp\archieves\revolver" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -74,6 +83,7 @@
       <workItem from="1774548412193" duration="874000" />
       <workItem from="1785576967104" duration="1689000" />
       <workItem from="1789578210255" duration="3882000" />
+      <workItem from="1789592191250" duration="3311000" />
     </task>
     <servers />
   </component>

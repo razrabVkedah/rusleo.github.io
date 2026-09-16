@@ -1,5 +1,6 @@
 window.textData = window.textData || {};
 window.textData.ru = {
+  "archiveLink": "Архив игр",
   "skip": "К содержимому",
   "navWork": "Работы",
   "navExperience": "Опыт",

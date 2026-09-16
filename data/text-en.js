@@ -1,5 +1,6 @@
 window.textData = window.textData || {};
 window.textData.en = {
+  "archiveLink": "Game archive",
   "skip": "Skip to content",
   "navWork": "Work",
   "navExperience": "Experience",
