@@ -73,7 +73,7 @@ window.textData.en = {
   "languages": "Russian — native · English — B2",
   "download": "Download resume",
   "backTop": "Back to top",
-  "openYoutube": "Open on YouTube ↗",
+  "openYoutube": "Open on YouTube",
   "navLabel": "Main navigation",
   "switchLanguage": "Переключить на русский",
   "portrait": "Ruslan Leontev",

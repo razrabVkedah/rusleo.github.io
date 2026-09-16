@@ -73,7 +73,7 @@ window.textData.ru = {
   "languages": "Русский — родной · Английский — B2",
   "download": "Скачать резюме",
   "backTop": "Наверх",
-  "openYoutube": "Открыть на YouTube ↗",
+  "openYoutube": "Открыть на YouTube",
   "navLabel": "Главная навигация",
   "switchLanguage": "Switch to English",
   "portrait": "Руслан Леонтьев",
