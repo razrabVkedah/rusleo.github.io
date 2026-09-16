@@ -11,25 +11,18 @@
                     {
                         title: "RuStore",
                         href: "https://rustore.ru/catalog/app/com.rusleo.firelinezombies"
-                    },
-                    {
-                        title: "CrazyGames",
-                        href: "https://www.crazygames.com/game/fireline-zombies"
                     }
                 ],
                 metrics: [],
                 status: "games.status.new",
-                cover: "/assets/img/fireline-zombies/1.webp",
+                cover: "/assets/img/fireline-zombies/combat.webp",
                 slides: [
-                    "/assets/img/fireline-zombies/1.webp",
-                    "/assets/img/fireline-zombies/2.webp",
-                    "/assets/img/fireline-zombies/3.webp",
-                    "/assets/img/fireline-zombies/4.webp",
-                    "/assets/img/fireline-zombies/5.webp",
-                    "/assets/img/fireline-zombies/6.webp",
-                    "/assets/img/fireline-zombies/7.webp",
-                    "/assets/img/fireline-zombies/8.webp",
-                    "/assets/img/fireline-zombies/9.webp"
+                    "/assets/img/fireline-zombies/combat.webp",
+                    "/assets/img/fireline-zombies/building.webp",
+                    "/assets/img/fireline-zombies/arsenal.webp",
+                    "/assets/img/fireline-zombies/modifiers.webp",
+                    "/assets/img/fireline-zombies/missions.webp",
+                    "/assets/img/fireline-zombies/scope.webp"
                 ]
             }
         ],

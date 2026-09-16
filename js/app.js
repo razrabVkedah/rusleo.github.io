@@ -19,11 +19,14 @@
     let video = null;
 
     function renderImage() {
-        const source = gallery[index].querySelector('img');
+        const link = gallery[index];
+        const source = link.querySelector('img');
         const image = document.createElement('img');
-        image.src = gallery[index].href;
-        image.alt = source.alt;
-        title.textContent = source.alt;
+        image.src = link.href;
+        image.alt = source?.alt || link.getAttribute('aria-label');
+        image.width = source?.getAttribute('width') || 1600;
+        image.height = source?.getAttribute('height') || 900;
+        title.textContent = image.alt;
         content.replaceChildren(image);
         count.textContent = `${index + 1} / ${gallery.length}`;
     }
@@ -39,13 +42,13 @@
         index = (index + delta + gallery.length) % gallery.length;
         renderImage();
     }
-    document.querySelectorAll('[data-image]').forEach(link => {
+    document.querySelectorAll('[data-image], [data-gallery]').forEach(link => {
         link.addEventListener('click', event => {
             if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
             event.preventDefault();
             video = null;
             gallery = Array.from(link.closest('.project-media').querySelectorAll('[data-image]'));
-            index = gallery.indexOf(link);
+            index = link.hasAttribute('data-gallery') ? 0 : gallery.indexOf(link);
             renderImage();
             open(link, false);
         });
