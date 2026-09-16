@@ -5,22 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c03a25ec-09bd-4b01-89af-584002935797" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/img/fireline-zombies/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/fireline-zombies/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/fireline-zombies/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/fireline-zombies/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/fireline-zombies/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/fireline-zombies/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/fireline-zombies/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/fireline-zombies/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/fireline-zombies/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_temp/chromble/Image Sequence_047_0000.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_temp/chromble/Image Sequence_049_0000.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_temp/chromble/chromble.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_temp/chromble/image (18).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_temp/chromble/image (19).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_temp/zombie/gameplay_overview_for_ai.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/sections/games.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/sections/games.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/projects.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/VFX_FireProjectile_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/VFX_Fire_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/VFX_Heal_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/VFX_Thunder_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/avatar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/avatar2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/fireline-zombies/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/fireline-zombies/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/fireline-zombies/2.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/fireline-zombies/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/fireline-zombies/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/fireline-zombies/4.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/fireline-zombies/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/fireline-zombies/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/fireline-zombies/6.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/fireline-zombies/7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/fireline-zombies/7.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/fireline-zombies/8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/fireline-zombies/8.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/fireline-zombies/9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/fireline-zombies/9.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/fireline-zombies/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/fireline-zombies/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/fireline_cover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/shooter_equipment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/sniper_africa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/sniper_bottles.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/sniper_dino.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/sniper_hunt.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/text-en.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/text-en.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/text-ru.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/text-ru.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/render.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/render.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/i18n.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/i18n.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +72,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "E:/rusleo.github.io/assets/img/fireline-zombies",
+    "last_opened_file_path": "E:/rusleo.github.io/_temp/chromble",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -59,9 +84,13 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\rusleo.github.io\_temp\chromble" />
+      <recent name="E:\rusleo.github.io\_temp" />
       <recent name="E:\rusleo.github.io\assets\img\fireline-zombies" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\rusleo.github.io\_temp\zombie" />
+      <recent name="E:\rusleo.github.io\_temp\chromble" />
       <recent name="E:\rusleo.github.io\assets\img\fireline-zombies" />
     </key>
   </component>
@@ -86,6 +115,7 @@
       <workItem from="1771666231215" duration="13661000" />
       <workItem from="1774548412193" duration="874000" />
       <workItem from="1785576967104" duration="1689000" />
+      <workItem from="1789578210255" duration="2873000" />
     </task>
     <servers />
   </component>

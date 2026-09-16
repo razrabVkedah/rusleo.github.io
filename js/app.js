@@ -1,171 +1,109 @@
-﻿function renderVfxModalSection() {
-    var grid = document.querySelector(".vfx-grid");
-    if (!grid) return;
-
-    var data = (window.projectsData && Array.isArray(window.projectsData.vfx))
-        ? window.projectsData.vfx
-        : [];
-
-    grid.innerHTML = data.map(item => {
-        var title = item.title || "VFX Shot";
-        var meta = item.meta || "";
-        var thumb = item.thumb || "";
-        var youtubeId = item.youtubeId || "";
-
-        return `
-            <article class="vfx-card">
-                <button class="vfx-card__btn js-vfx-open"
-                        type="button"
-                        data-youtube="${youtubeId}"
-                        aria-label="Play ${title}">
-                    <div class="vfx-card__media">
-                        <img class="vfx-card__thumb" src="${thumb}" alt="${title}">
-                        <div class="vfx-card__overlay">
-                            <span class="vfx-card__play"></span>
-                        </div>
-                    </div>
-                </button>
-
-                <div class="vfx-card__body">
-                    <h3 class="vfx-card__title">${title}</h3>
-                    <p class="vfx-card__meta">${meta}</p>
-                </div>
-            </article>
-        `;
-    }).join("");
-
-    wireVfxModal();
-}
-
-function wireVfxModal() {
-    var modal = document.querySelector(".js-vfx-modal");
-    var frame = document.querySelector(".js-vfx-frame");
-    if (!modal || !frame) return;
-
-    var closeBtns = modal.querySelectorAll(".js-vfx-close");
-    var openBtns = document.querySelectorAll(".js-vfx-open");
-
-    var vfxScrollY = 0;
-
-    var vfxScrollY = 0;
-
-    function openModal(youtubeId) {
-        if (!youtubeId) return;
-
-        vfxScrollY = window.scrollY || window.pageYOffset || 0;
-
-        document.body.style.top = "-" + vfxScrollY + "px";
-        document.documentElement.classList.add("is-modal-open");
-        document.body.classList.add("is-modal-open");
-
-        modal.classList.add("is-open");
-        modal.setAttribute("aria-hidden", "false");
-
-        frame.innerHTML = `
-        <iframe
-            class="vfx-modal__iframe"
-            src="https://www.youtube-nocookie.com/embed/${youtubeId}?autoplay=1&rel=0"
-            title="VFX video"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-        </iframe>
-    `;
-    }
-
-    function closeModal() {
-        modal.classList.remove("is-open");
-        modal.setAttribute("aria-hidden", "true");
-        frame.innerHTML = "";
-
-        document.documentElement.classList.remove("is-modal-open");
-        document.body.classList.remove("is-modal-open");
-
-        document.body.style.top = "";
-
-        window.scrollTo(0, vfxScrollY);
-    }
-
-    openBtns.forEach(btn => {
-        btn.addEventListener("click", () => {
-            var youtubeId = btn.getAttribute("data-youtube");
-            openModal(youtubeId);
-        });
-    });
-
-    closeBtns.forEach(btn => {
-        btn.addEventListener("click", closeModal);
-    });
-
-    document.addEventListener("keydown", (e) => {
-        if (e.key !== "Escape") return;
-        if (!modal.classList.contains("is-open")) return;
-        closeModal();
-    });
-}
-
 (() => {
-    lucide.createIcons();
-    document.querySelector(".site-footer__year").textContent = String(new Date().getFullYear());
+    window.i18n.init();
+    const languageButton = document.querySelector('.lang-toggle');
+    languageButton.hidden = false;
+    languageButton.addEventListener('click', () => window.i18n.toggle());
+    document.querySelector('#year').textContent = new Date().getFullYear();
 
-    var currentLang = window.i18n.init();
-    var langBtn = document.querySelector(".lang-toggle");
-    var langLabel = document.querySelector(".lang-toggle__label");
-    langLabel.textContent = currentLang.toUpperCase();
+    const dialog = document.querySelector('.media-dialog');
+    if (!dialog || typeof dialog.showModal !== 'function') return;
+    const content = dialog.querySelector('.dialog-content');
+    const title = dialog.querySelector('#media-title');
+    const previous = dialog.querySelector('.gallery-prev');
+    const next = dialog.querySelector('.gallery-next');
+    const count = dialog.querySelector('.gallery-count');
+    const external = dialog.querySelector('.video-external');
+    let trigger = null;
+    let gallery = [];
+    let index = 0;
+    let video = null;
 
-    langBtn.addEventListener("click", () => {
-        var next = window.i18n.toggle();
-        langLabel.textContent = next.toUpperCase();
-    });
-
-    var artBtn = document.getElementById("artstationBtn");
-    if (artBtn && window.linksData && window.linksData.artstation) {
-        artBtn.href = window.linksData.artstation;
+    function renderImage() {
+        const source = gallery[index].querySelector('img');
+        const image = document.createElement('img');
+        image.src = gallery[index].href;
+        image.alt = source.alt;
+        title.textContent = source.alt;
+        content.replaceChildren(image);
+        count.textContent = `${index + 1} / ${gallery.length}`;
     }
-
-    var tgCard = document.getElementById("telegramCard");
-    if (tgCard && window.linksData && window.linksData.telegram) {
-        tgCard.href = window.linksData.telegram;
+    function open(from, isVideo) {
+        trigger = from;
+        previous.hidden = next.hidden = count.hidden = isVideo;
+        external.hidden = !isVideo;
+        dialog.showModal();
+        document.body.classList.add('has-dialog');
+        dialog.querySelector('.dialog-close').focus();
     }
-
-    var artProfileBtn = document.getElementById("artstationProfileBtn");
-    if (artProfileBtn && window.linksData && window.linksData.artstation) {
-        artProfileBtn.href = window.linksData.artstation;
+    function advance(delta) {
+        index = (index + delta + gallery.length) % gallery.length;
+        renderImage();
     }
-
-
-    window.render.mountQuickLinks(document.getElementById("quickLinks"), window.linksData);
-
-    var gamesGrid = document.getElementById("gamesGrid");
-    var codeGrid = document.getElementById("codeGrid");
-    var skills = document.getElementById("skills");
-
-    window.render.mountGamesGrid(gamesGrid, window.projectsData.games.new);
-    window.render.mountList(codeGrid, window.projectsData.code);
-    window.render.mountSkills(skills, window.projectsData.skills);
-
-    renderVfxModalSection();
-    window.i18n.apply(window.i18n.get());
-    var tabs = document.getElementById("gamesTabs");
-    if (!tabs) {
-        return;
-    }
-    var btns = tabs.querySelectorAll(".tabs__btn");
-
-    btns.forEach(btn => {
-        btn.addEventListener("click", () => {
-            btns.forEach(b => b.classList.remove("is-active"));
-            btn.classList.add("is-active");
-
-            var tab = btn.getAttribute("data-tab");
-            if (tab === "legacy") {
-                window.render.mountGamesGrid(gamesGrid, window.projectsData.games.legacy);
-                window.i18n.apply(window.i18n.get());
-                return;
-            }
-            window.render.mountGamesGrid(gamesGrid, window.projectsData.games.new);
-            window.i18n.apply(window.i18n.get());
+    document.querySelectorAll('[data-image]').forEach(link => {
+        link.addEventListener('click', event => {
+            if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+            event.preventDefault();
+            video = null;
+            gallery = Array.from(link.closest('.project-media').querySelectorAll('[data-image]'));
+            index = gallery.indexOf(link);
+            renderImage();
+            open(link, false);
         });
     });
-
+    document.querySelectorAll('[data-video]').forEach(link => {
+        link.addEventListener('click', event => {
+            if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+            event.preventDefault();
+            video = link;
+            const iframe = document.createElement('iframe');
+            iframe.src = `https://www.youtube-nocookie.com/embed/${link.dataset.video}?rel=0`;
+            iframe.title = link.querySelector('h5').textContent;
+            iframe.allow = 'encrypted-media; fullscreen; picture-in-picture';
+            iframe.allowFullscreen = true;
+            iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+            title.textContent = iframe.title;
+            external.href = link.href;
+            content.replaceChildren(iframe);
+            open(link, true);
+        });
+    });
+    previous.addEventListener('click', () => advance(-1));
+    next.addEventListener('click', () => advance(1));
+    dialog.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', event => {
+        const bounds = dialog.getBoundingClientRect();
+        if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
+    });
+    dialog.addEventListener('keydown', event => {
+        if (event.key === 'Tab') {
+            const focusable = Array.from(dialog.querySelectorAll('button:not([hidden]), a[href]:not([hidden]), iframe'));
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+            if (event.shiftKey && document.activeElement === first) {
+                event.preventDefault();
+                last.focus();
+            } else if (!event.shiftKey && document.activeElement === last) {
+                event.preventDefault();
+                first.focus();
+            }
+        }
+        if (!video && ['ArrowLeft', 'ArrowRight'].includes(event.key)) {
+            event.preventDefault();
+            advance(event.key === 'ArrowLeft' ? -1 : 1);
+        }
+    });
+    dialog.addEventListener('close', () => {
+        content.replaceChildren();
+        document.body.classList.remove('has-dialog');
+        trigger?.focus({ preventScroll: true });
+        video = null;
+        gallery = [];
+    });
+    document.addEventListener('languagechange', () => {
+        if (!dialog.open) return;
+        if (video) {
+            title.textContent = video.querySelector('h5').textContent;
+            content.querySelector('iframe').title = title.textContent;
+        } else renderImage();
+    });
 })();

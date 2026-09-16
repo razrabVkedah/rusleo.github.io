@@ -1,99 +1,93 @@
-﻿window.textData = window.textData || {};
+window.textData = window.textData || {};
 window.textData.en = {
-    platforms: {
-        yandexGames: "Yandex Games",
-    },
-    nav: {games: "Games", vfx: "VFX", code: "Code", about: "About", contact: "Contact"},
-    hero: {
-        kicker: "Unity Developer • VFX Artist",
-        title: "Portfolio",
-        subtitle: "Unity systems, WebGL production and VFX — clean architecture, URP rendering, multiplayer integration and performance-oriented engineering.",
-        ctaPrimary: "See projects",
-        ctaSecondary: "Contact",
-        role: "Unity Developer / VFX",
-        fact1: "WebGL shipping",
-        fact2: "URP / VFX",
-        fact3: "Gameplay systems"
-    },
-    sections: {
-        games: "Games",
-        gamesSub: "Games released on Yandex Games, RuStore, and CrazyGames.",
-        vfx: "VFX",
-        vfxSub: "Real-time VFX · Mobile-optimized · Production-ready",
-        code: "Code",
-        codeSub: "My libraries and systems · View on GitHub",
-        about: "About",
-        contact: "Contact",
-        contactSub: "Fastest way: Telegram."
-    },
-    tabs: {new: "New", legacy: "Legacy"},
-    vfx: {
-        title: "ArtStation portfolio",
-        "view-all-button": "View Full ArtStation Profile",
-        text: "VFX focused work. More reels will be added over time.",
-        placeholder: "Add a reel later (YouTube / mp4 poster)."
-    },
-    about: {
-        p1: "Middle+ Unity Developer with 4+ years of experience building scalable gameplay systems and production-ready pipelines. I take full ownership of the Unity client — from architecture setup and URP configuration to release and post-launch improvements.",
-        p2: "Strong in C# and clean, interface-based architecture (SOLID, event-driven systems). I design modular systems that remain stable as projects grow, focusing on memory efficiency and performance optimization.",
-        p3: "Experienced with multiplayer (Photon, Mirror, custom TCP/UDP/RPC), SDK integrations (Firebase, Yandex Games, AppsFlyer, OneSignal), and backend interaction (ASP.NET Core, Node.js). I also build internal tools and custom editors to streamline team workflows.",
-        p4: "Rendering-focused developer: URP, Shader Graph, HLSL, VFX Graph, materials, and optimization for WebGL and mobile platforms."
-    },
-    contact: {
-        email: "Email",
-        "download-cv": "Download CV",
-        "cv-info": "PDF • 0.11 MB"
-    },
-    code: {
-        "utils-library": {
-            title: "Utils Library",
-            subtitle: "Utility scripts & math tools for Unity",
-        },
-        "voxel-pathfinding": {
-            title: "Voxel Pathfinding",
-            subtitle: "Voxel A* system; spatial data optimization",
-        },
-        "socket-io-networking": {
-            title: "Socket.IO Networking",
-            subtitle: "Real-time client-server communication and RPC sync",
-        }
-    },
-    games: {
-        type: {
-            new: "New",
-            legacy: "Legacy",
-        },
-        status: {
-            "600k-players": "600k players",
-            "new": "NEW"
-        },
-        new: {
-            fireline: {
-                title: "Fireline: Zombies",
-                subtitle: "Defend your position against waves of zombies.",
-            }
-        },
-        legacy: {
-            "shooter-equipment": {
-                title: "Shooter: equipment",
-                subtitle: "Yandex Games",
-            },
-            "sniper-africa": {
-                title: "Sniper: Africa",
-                subtitle: "Yandex Games",
-            },
-            "break-bottles": {
-                title: "Sniper: break bottles",
-                subtitle: "Yandex Games",
-            },
-            "sniper-dino": {
-                title: "Sniper: Dinosaurs",
-                subtitle: "Yandex Games",
-            },
-            "sniper-hunt": {
-                title: "Sniper: Hunting",
-                subtitle: "Yandex Games",
-            }
-        }
-    }
+  "skip": "Skip to content",
+  "navWork": "Work",
+  "navExperience": "Experience",
+  "navCode": "Engineering",
+  "navContact": "Contact",
+  "heroName": "RUSLAN LEONTEV / RUSLEO",
+  "heroFocus": "Gameplay systems. Graphics. Optimization.",
+  "heroIntro": "I connect game logic, visuals and tools — from a puzzle’s rules to rendering on mobile.",
+  "viewWork": "Explore my work",
+  "cv": "Resume · PDF",
+  "workLabel": "Selected work",
+  "work": "Games, from rules to feedback.",
+  "chrombleBoard": "Chromble: the 8 × 8 board and three playable pieces",
+  "chrombleCascade": "Chromble: a color group clears with particles and combo feedback",
+  "solo": "Independent project · Solo developer",
+  "chrombleLead": "Simple moves. Cascading consequences.",
+  "chrombleIntro": "An 8 × 8 color puzzle: place a piece, connect six matching blocks and let gravity trigger the next cascade.",
+  "coreLabel": "Game logic",
+  "chrombleCore": "A C# core independent of Unity; presentation reacts to game events.",
+  "generationLabel": "Adaptive generation",
+  "chrombleGeneration": "Piece selection considers board occupancy and the number of valid placements.",
+  "chrombleDetail1": "BoardModel handles placement, gravity and connected color groups. BoardResolver computes the cascade sequence; effects and sound follow its events.",
+  "chrombleStep1": "Evaluate the board",
+  "chrombleStep2": "Choose a shape and color",
+  "chrombleStep3": "Resolve the cascade",
+  "chrombleDetail2": "When space becomes scarce, SpawnDirector favors pieces with more valid placements or searches for a shape, color and position that clears more blocks. This is a rule-based heuristic.",
+  "chrombleDetail3": "The next piece can be picked up during a cascade, but placement waits until the board settles. Preview calculations do not change the live board.",
+  "chrombleDetails": "Inside the game logic",
+  "chromblePlay": "Play on Yandex Games",
+  "firelineLead": "Build a defense. Hold the line.",
+  "firelineIntro": "A first-person defense game combining shooting, zombie waves, barricades and progression between missions.",
+  "loopLabel": "Connected systems",
+  "firelineLoop": "Preparation changes the battle; mission rewards feed weapon and defense upgrades.",
+  "economyLabel": "Two resource limits",
+  "firelineEconomy": "Persistent purchases and the mission’s construction budget serve different parts of progression.",
+  "fireline1": "Fireline: defending the street against a zombie wave",
+  "fireline3": "Fireline: gameplay screenshot 3",
+  "fireline5": "Fireline: gameplay screenshot 5",
+  "enlarge": "Select a frame to enlarge",
+  "experienceLabel": "Commercial experience",
+  "experience": "Where disciplines meet.",
+  "bullContext": "Mobile game · team development",
+  "bullIntro": "I was responsible for the technical implementation of the project’s visuals in Unity, bringing together the work of artists and animators.",
+  "bull1": "Custom URP rendering passes, procedural materials, shaders and VFX.",
+  "bull2": "Content integration and organization of the Unity project.",
+  "bull3": "Profiling on iOS and Android with Profiler, Memory Profiler and Frame Debugger.",
+  "vfxHeading": "Selected real-time effects",
+  "vfxfire": "Fire Impact",
+  "watch": "Watch video",
+  "vfxheal": "Healing Spell",
+  "vfxthunder": "Thunder Strike",
+  "bullNote": "The project is on hold. These effects are shared with permission.",
+  "engineeringLabel": "Engineering notes",
+  "engineering": "A closer look at the systems.",
+  "source": "Source on GitHub",
+  "voxelIntro": "3D navigation through an adaptive representation of space. Cells near geometry are subdivided; free cells become a graph for route search.",
+  "voxelStep1": "Subdivide space",
+  "voxelStep2": "Build the graph",
+  "voxelStep3": "Refine the route",
+  "voxelDetail1": "Subdivision creates eight child cells with face-based adjacency. Route processing uses intersections with cell faces before the demo agent follows a smoothed path.",
+  "voxelDetail2": "Finer cells describe geometry more precisely but grow the graph. The current search sorts a list of open nodes; this implementation is an exploration of spatial navigation, not a benchmarked high-performance solver.",
+  "voxelDetails": "Representation and trade-offs",
+  "networkIntro": "A Unity synchronization layer with RPCs, network variables and buffered transform states. Updates are batched into ticks; remote motion uses delayed interpolation.",
+  "networkStep1": "Collect changes",
+  "networkStep2": "Send on a tick",
+  "networkStep3": "Interpolate states",
+  "networkDetail1": "Attributes register RPCs; generic network variables define state. HostToClient, ClientToHost and Both control update direction, while Calm and Forced distinguish sending modes.",
+  "networkDetail2": "Running the project requires the paid Best Socket.IO transport and a separate server, which is not in the repository. Prediction and reconciliation are not implemented features.",
+  "networkDetails": "Data flow and boundaries",
+  "utils": "Reusable runtime and editor tools: extensible logging, a metrics HUD, splines and editor shortcuts. Packaged for UPM.",
+  "viewCode": "View code",
+  "next": "WHAT’S NEXT",
+  "contactTitle": "Let’s build something worth playing.",
+  "contactIntro": "I’m looking to join a team building an ambitious game, with room for thoughtful engineering and collaboration.",
+  "languages": "Russian — native · English — B2",
+  "download": "Download resume",
+  "backTop": "Back to top",
+  "openYoutube": "Open on YouTube ↗",
+  "navLabel": "Main navigation",
+  "switchLanguage": "Переключить на русский",
+  "portrait": "Ruslan Leontev",
+  "close": "Close viewer",
+  "previous": "Previous image",
+  "nextImage": "Next image",
+  "pageTitle": "Ruslan Leontev — Unity Developer",
+  "description": "Ruslan Leontev — Unity Developer. Gameplay systems, real-time graphics and optimization. Selected games, commercial experience and open-source code.",
+  "spatialLabel": "Spatial algorithms",
+  "networkLabel": "Network states",
+  "toolsLabel": "Unity tooling",
+  "puzzleLabel": "2D puzzle"
 };

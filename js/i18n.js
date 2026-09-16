@@ -1,53 +1,30 @@
-﻿window.i18n = (() => {
-    var currentLang = "en";
-
-    function setText(root, dict) {
-        var nodes = root.querySelectorAll("[data-i18n]");
-        nodes.forEach(node => {
-            var key = node.getAttribute("data-i18n");
-            var parts = key.split(".");
-            var value = dict;
-
-            for (var i = 0; i < parts.length; i++) {
-                if (!value || typeof value !== "object") {
-                    value = null;
-                    break;
-                }
-                value = value[parts[i]];
-            }
-
-            if (typeof value === "string") {
-                node.textContent = value;
-            }
-        });
+window.i18n = (() => {
+    let currentLang = 'en';
+    function text(key) {
+        return window.textData[currentLang]?.[key] ?? window.textData.en[key] ?? key;
     }
-
     function apply(lang) {
-        currentLang = lang;
-        var dict = window.textData[lang] || window.textData.en;
-        setText(document, dict);
-        document.documentElement.lang = lang;
-        window.localStorage.setItem("lang", lang);
-    }
-
-    function toggle() {
-        var next = currentLang === "en" ? "ru" : "en";
-        apply(next);
-        return next;
-    }
-
-    function init() {
-        var stored = window.localStorage.getItem("lang");
-        if (stored === "ru" || stored === "en") {
-            currentLang = stored;
+        currentLang = lang === 'ru' ? 'ru' : 'en';
+        document.documentElement.lang = currentLang;
+        document.querySelectorAll('[data-i18n]').forEach(node => {
+            node.textContent = text(node.dataset.i18n);
+        });
+        for (const attribute of ['alt', 'aria']) {
+            document.querySelectorAll(`[data-i18n-${attribute}]`).forEach(node => {
+                node.setAttribute(attribute === 'aria' ? 'aria-label' : 'alt', text(node.getAttribute(`data-i18n-${attribute}`)));
+            });
         }
-        apply(currentLang);
+        document.title = text('pageTitle');
+        document.querySelector('meta[name="description"]').content = text('description');
+        document.querySelector('meta[property="og:title"]').content = text('pageTitle');
+        document.querySelector('meta[property="og:description"]').content = text('description');
+        try { localStorage.setItem('lang', currentLang); } catch { /* Storage is optional. */ }
+        document.dispatchEvent(new CustomEvent('languagechange'));
         return currentLang;
     }
-
-    function get() {
-        return currentLang;
+    function init() {
+        try { currentLang = localStorage.getItem('lang') === 'ru' ? 'ru' : 'en'; } catch { /* Use English. */ }
+        return apply(currentLang);
     }
-
-    return {init, toggle, apply, get};
+    return { init, apply, text, get: () => currentLang, toggle: () => apply(currentLang === 'en' ? 'ru' : 'en') };
 })();

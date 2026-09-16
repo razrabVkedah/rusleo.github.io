@@ -1,236 +1,391 @@
 <!doctype html>
-<html lang="en" class="page">
-<head class="page__head">
-    <meta charset="utf-8" class="page__meta">
-    <meta name="viewport" content="width=device-width, initial-scale=1" class="page__meta">
-    <meta name="description" content="Rusleo — Unity Developer / VFX. Projects, code, games, links." class="page__meta">
-    <title class="page__title">Rusleo — Portfolio</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon.png">
-    <link rel="stylesheet" href="css/base.css" class="page__css">
-    <link rel="stylesheet" href="css/components.css" class="page__css">
-    <link rel="stylesheet" href="css/button.css">
-    <link rel="stylesheet" href="css/brand.css">
-    <link rel="stylesheet" href="css/card.css">
-    <link rel="stylesheet" href="css/tabs.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/effects/background.css">
-    <link rel="stylesheet" href="css/sections/hero.css">
-    <link rel="stylesheet" href="css/sections/vfx.css">
-    <link rel="stylesheet" href="css/sections/games.css">
-    <link rel="stylesheet" href="css/sections/contact.css">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#141513">
+  <meta name="description" content="Ruslan Leontev — Unity Developer. Gameplay systems, real-time graphics and optimization. Selected games, commercial experience and open-source code.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ruslan Leontev — Unity Developer">
+  <meta property="og:description" content="Gameplay systems, real-time graphics and optimization. Selected work by Rusleo.">
+  <meta property="og:url" content="https://rusleo.ru/">
+  <meta property="og:image" content="https://rusleo.ru/assets/img/portfolio/social.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://rusleo.ru/">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/portfolio/favicon.png?v=2">
+  <link rel="icon" type="image/svg+xml" sizes="any" href="assets/img/portfolio/favicon.svg">
+  <link rel="stylesheet" href="css/portfolio.css">
+  <title>Ruslan Leontev — Unity Developer</title>
 </head>
-
-<body class="page__body">
-<canvas class="proc-bg"></canvas>
+<body id="top">
+<a class="skip-link" href="#main">
+<span data-i18n="skip">Skip to content</span>
+</a>
 <header class="site-header">
-    <div class="container">
-        <div class="topbar">
-            <a class="brand" href="#top">
-                <span class="brand__dot"></span>
-                <span class="brand__name">Rusleo</span>
-            </a>
-
-            <nav class="nav">
-                <a class="nav__link" href="#code" data-i18n="nav.code">Code</a>
-                <a class="nav__link" href="#vfx" data-i18n="nav.vfx">VFX</a>
-                <a class="nav__link" href="#games" data-i18n="nav.games">Games</a>
-                <a class="nav__link" href="#about" data-i18n="nav.about">About</a>
-                <a class="nav__link" href="#contact" data-i18n="nav.contact">Contact</a>
-            </nav>
-
-            <div class="topbar__actions">
-                <button class="lang-toggle" type="button" aria-label="Toggle language">
-                    <span class="lang-toggle__label">EN</span>
-                </button>
-            </div>
-        </div>
-
-        <div class="hero" id="top">
-            <div class="hero__left">
-                <p class="hero__kicker" data-i18n="hero.kicker">Unity Developer • VFX Artist</p>
-                <h1 class="hero__title" data-i18n="hero.title">Portfolio</h1>
-                <p class="hero__subtitle" data-i18n="hero.subtitle">
-                    Unity systems, WebGL production, VFX — with a clean engineering approach.
-                </p>
-
-                <div class="hero__cta">
-                    <a class="btn btn--primary" href="#games" data-i18n="hero.ctaPrimary">See projects</a>
-                    <a class="btn btn--ghost" href="#contact" data-i18n="hero.ctaSecondary">Contact</a>
-                </div>
-
-                <div class="profile-card__body">
-                    <div class="profile-card__facts">
-                        <span class="pill">WebGL Production</span>
-                        <span class="pill">URP Rendering</span>
-                        <span class="pill">Shader Graph</span>
-                        <span class="pill">HLSL</span>
-                        <span class="pill">Gameplay Systems</span>
-                        <span class="pill">Multiplayer</span>
-                        <span class="pill">Client–Server</span>
-                        <span class="pill">Performance Optimization</span>
-                        <span class="pill">Custom Tools</span>
-                    </div>
-
-                </div>
-                <div class="quick-links" id="quickLinks"></div>
-            </div>
-            <div class="hero__right">
-                <div class="profile-card">
-                    <div class="profile-card__avatar" aria-hidden="true"></div>
-                </div>
-                <div class="hero__glow" aria-hidden="true"></div>
-            </div>
-        </div>
-    </div>
-</header>
-
-<main class="site-main">
-    <section class="section" id="code">
-        <div class="container">
-            <div class="section-head">
-                <h2 class="section-head__title" data-i18n="sections.code">Code</h2>
-                <p class="section-head__sub" data-i18n="sections.codeSub">Reusable libraries and systems.</p>
-            </div>
-
-            <div class="cards-grid" id="codeGrid"></div>
-        </div>
-    </section>
-
-    <section class="section vfx" id="vfx">
-        <div class="container">
-            <div class="section-head">
-                <h2 class="section-head__title" data-i18n="sections.vfx">VFX</h2>
-                <p class="section-head__sub" data-i18n="sections.vfxSub">
-                    Real-time VFX experiments and production-ready shots.
-                </p>
-            </div>
-            <div class="vfx__grid vfx-grid"></div>
-            <div class="vfx__profile">
-                <a class="vfx__profile-link btn btn--primary"
-                   id="artstationProfileBtn"
-                   href="#"
-                   target="_blank"
-                   rel="noreferrer"
-                   data-i18n="vfx.view-all-button">
-                    View Full ArtStation Profile
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" id="games">
-        <div class="container">
-            <div class="section-head">
-                <h2 class="section-head__title" data-i18n="sections.games">Games</h2>
-                <p class="section-head__sub" data-i18n="sections.gamesSub">Games released on Yandex Games, RuStore,
-                    and CrazyGames.</p>
-            </div>
-
-            <div class="tabs" id="gamesTabs">
-                <button class="tabs__btn is-active" type="button" data-tab="new">
-                    <i data-lucide="flame" class="tabs__icon"></i>
-                    <span class="tabs__label" data-i18n="games.type.new">New</span>
-                </button>
-
-                <button class="tabs__btn" type="button" data-tab="legacy">
-                    <i data-lucide="archive" class="tabs__icon"></i>
-                    <span class="tabs__label" data-i18n="games.type.legacy">Legacy</span>
-                </button>
-            </div>
-
-            <div class="cards-grid" id="gamesGrid"></div>
-        </div>
-    </section>
-
-    <section class="section" id="about">
-        <div class="container">
-            <div class="section-head">
-                <h2 class="section-head__title" data-i18n="sections.about">About</h2>
-            </div>
-
-            <div class="about">
-                <div class="about__panel">
-                    <p class="about__text" data-i18n="about.p1">
-                        Middle+ Unity Developer with 4+ years of experience building scalable gameplay systems and
-                        production-ready pipelines. I take full ownership of the Unity client — from architecture setup
-                        and URP configuration to release and post-launch improvements.
-                    </p>
-                    <p class="about__text" data-i18n="about.p2">
-                        Strong in C# and clean, interface-based architecture (SOLID, event-driven systems). I design
-                        modular systems that remain stable as projects grow, focusing on memory efficiency and
-                        performance optimization.
-                    </p>
-                    <p class="about__text" data-i18n="about.p3">
-                        Experienced with multiplayer (Photon, Mirror, custom TCP/UDP/RPC), SDK integrations (Firebase,
-                        Yandex Games, AppsFlyer, OneSignal), and backend interaction (ASP.NET Core, Node.js). I also
-                        build internal tools and custom editors to streamline team workflows.
-                    </p>
-                    <p class="about__text" data-i18n="about.p4">
-                        Rendering-focused developer: URP, Shader Graph, HLSL, VFX Graph, materials, and optimization for
-                        WebGL and mobile platforms.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" id="contact">
-        <div class="container">
-            <div class="section-head">
-                <h2 class="section-head__title" data-i18n="sections.contact">Contact</h2>
-            </div>
-
-            <div class="contact">
-                <a class="contact-card"
-                   href="https://t.me/razrab_v_kedah"
-                   target="_blank"
-                   rel="noreferrer">
-                    <span class="contact-card__title">Telegram</span>
-                    <span class="contact-card__sub">@razrab_v_kedah</span>
-                </a>
-                <a class="contact-card"
-                   href="mailto:leonrusgamedev2004@yandex.ru?subject=Unity%20Collaboration">
-                    <span class="contact-card__title" data-i18n="contact.email">Email</span>
-                    <span class="contact-card__sub">leonrusgamedev2004@yandex.ru</span>
-                </a>
-                <a class="contact-card contact-card--cv"
-                   href="/assets/Ruslan_Unity_Developer_CV.pdf"
-                   download>
-                    <span class="contact-card__title" data-i18n="contact.download-cv">Download CV</span>
-                    <span class="contact-card__sub" data-i18n="contact.cv-info">PDF • 0.11 MB</span>
-                </a>
-
-            </div>
-        </div>
-    </section>
-
-</main>
-
-<footer class="site-footer">
-    <div class="container">
-        <p class="site-footer__text">© <span class="site-footer__year"></span> Rusleo</p>
-    </div>
-</footer>
-
-<div class="vfx-modal js-vfx-modal" aria-hidden="true">
-    <div class="vfx-modal__backdrop js-vfx-close"></div>
-
-    <div class="vfx-modal__dialog" role="dialog" aria-modal="true" aria-label="VFX Player">
-        <button class="vfx-modal__close js-vfx-close" type="button" aria-label="Close"></button>
-        <div class="vfx-modal__frame js-vfx-frame"></div>
-    </div>
+<div class="container topbar">
+<a class="brand" href="#top">
+<span class="brand-mark" aria-hidden="true">r.</span> rusleo</a>
+<nav aria-label="Main" data-i18n-aria="navLabel">
+<a class="nav-link" href="#work">
+<span data-i18n="navWork">Work</span>
+</a>
+<a class="nav-link" href="#experience">
+<span data-i18n="navExperience">Experience</span>
+</a>
+<a class="nav-link" href="#code">
+<span data-i18n="navCode">Engineering</span>
+</a>
+<a class="nav-link" href="#contact">
+<span data-i18n="navContact">Contact</span>
+</a>
+</nav>
+<button class="lang-toggle" type="button" aria-label="Switch to Russian" data-i18n-aria="switchLanguage" hidden>
+<span class="lang-en">EN</span>
+<span aria-hidden="true">/</span>
+<span class="lang-ru">RU</span>
+</button>
 </div>
-
-<script src="https://unpkg.com/lucide@latest"></script>
-<script src="data/links.js"></script>
-<script src="data/projects.js"></script>
-<script src="data/text-en.js"></script>
-<script src="data/text-ru.js"></script>
-<script src="js/i18n.js"></script>
-<script src="js/render.js"></script>
-<script type="module" src="./proc-bg/index.js"></script>
-<script src="js/app.js"></script>
-<script>
+</header>
+<main id="main">
+<section class="hero container" aria-labelledby="hero-title">
+<div class="hero-copy">
+<p data-i18n="heroName" class="eyebrow">RUSLAN LEONTEV / RUSLEO</p>
+<h1 id="hero-title">Unity<br>
+<span>Developer.</span>
+</h1>
+<p data-i18n="heroFocus" class="hero-focus">Gameplay systems. Graphics. Optimization.</p>
+<p data-i18n="heroIntro" class="hero-intro">I connect game logic, visuals and tools — from a puzzle’s rules to rendering on mobile.</p>
+<div class="actions">
+<a class="button primary" href="#work">
+<span data-i18n="viewWork">Explore my work</span> <span aria-hidden="true">↘</span>
+</a>
+<a class="button secondary" href="assets/Ruslan_Unity_Developer_CV.pdf">
+<span data-i18n="cv">Resume · PDF</span>
+</a>
+</div>
+<div class="hero-links">
+<a class="text-link" href="https://github.com/razrabVkedah" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+<a class="text-link" href="https://www.artstation.com/rusleo" target="_blank" rel="noopener noreferrer">ArtStation ↗</a>
+<a class="text-link" href="https://t.me/razrab_v_kedah" target="_blank" rel="noopener noreferrer">Telegram ↗</a>
+</div>
+</div>
+<figure class="hero-portrait">
+<img src="assets/img/portfolio/portrait.webp" width="640" height="640" alt="Ruslan Leontev" data-i18n-alt="portrait" fetchpriority="high">
+<figcaption>
+<span>Unity / C# / URP</span>
+<span aria-hidden="true">RUSLEO</span>
+</figcaption>
+</figure>
+</section>
+<section class="section container" id="work">
+<div class="section-heading">
+<div>
+<span class="eyebrow">01 / <span data-i18n="workLabel">Selected work</span>
+</span>
+<h2 data-i18n="work">Games, from rules to feedback.</h2>
+</div>
+</div>
+<article class="project fireline" aria-labelledby="fireline-title">
+<div class="project-copy">
+<p class="eyebrow">01 / UNITY · ANDROID · WEBGL</p>
+<h3 id="fireline-title">Fireline: Zombies</h3>
+<p data-i18n="solo" class="project-role">Independent project · Solo developer</p>
+<p data-i18n="firelineLead" class="project-lead">Build a defense. Hold the line.</p>
+<p data-i18n="firelineIntro">A first-person defense game combining shooting, zombie waves, barricades and progression between missions.</p>
+<dl class="project-facts">
+<div>
+<dt data-i18n="loopLabel">Connected systems</dt>
+<dd data-i18n="firelineLoop">Preparation changes the battle; mission rewards feed weapon and defense upgrades.</dd>
+</div>
+<div>
+<dt data-i18n="economyLabel">Two resource limits</dt>
+<dd data-i18n="firelineEconomy">Persistent purchases and the mission’s construction budget serve different parts of progression.</dd>
+</div>
+</dl>
+<div class="actions">
+<a class="text-link" href="https://rustore.ru/catalog/app/com.rusleo.firelinezombies" target="_blank" rel="noopener noreferrer">RuStore ↗</a>
+<a class="text-link" href="https://www.crazygames.com/game/fireline-zombies" target="_blank" rel="noopener noreferrer">CrazyGames ↗</a>
+</div>
+</div>
+<div class="project-media fireline-media">
+<a class="shot" href="assets/img/fireline-zombies/1.webp" data-image>
+<img src="assets/img/fireline-zombies/1.webp" width="1280" height="720" alt="Fireline: defending the street against a zombie wave" data-i18n-alt="fireline1" loading="eager" decoding="async">
+<span class="zoom" aria-hidden="true">↗</span>
+</a>
+<div class="fireline-thumbs">
+<a class="shot" href="assets/img/fireline-zombies/3.webp" data-image>
+<img src="assets/img/fireline-zombies/3.webp" width="1280" height="720" alt="Fireline: gameplay screenshot 3" data-i18n-alt="fireline3" loading="lazy" decoding="async">
+<span class="zoom" aria-hidden="true">↗</span>
+</a>
+<a class="shot" href="assets/img/fireline-zombies/5.webp" data-image>
+<img src="assets/img/fireline-zombies/5.webp" width="1280" height="720" alt="Fireline: gameplay screenshot 5" data-i18n-alt="fireline5" loading="lazy" decoding="async">
+<span class="zoom" aria-hidden="true">↗</span>
+</a>
+</div>
+<p class="media-caption">
+<span data-i18n="enlarge">Select a frame to enlarge</span> <span aria-hidden="true">↗</span>
+</p>
+</div>
+</article>
+<article class="project chromble" aria-labelledby="chromble-title">
+<div class="project-media chromble-media">
+<a class="shot" href="assets/img/chromble/board.webp" data-image>
+<img src="assets/img/chromble/board.webp" width="720" height="1280" alt="Chromble: the 8 × 8 board and three playable pieces" data-i18n-alt="chrombleBoard" loading="lazy" decoding="async">
+<span class="zoom" aria-hidden="true">↗</span>
+</a>
+<a class="shot" href="assets/img/chromble/cascade.webp" data-image>
+<img src="assets/img/chromble/cascade.webp" width="720" height="1280" alt="Chromble: a color group clears with particles and combo feedback" data-i18n-alt="chrombleCascade" loading="lazy" decoding="async">
+<span class="zoom" aria-hidden="true">↗</span>
+</a>
+</div>
+<div class="project-copy">
+<p class="eyebrow">02 / UNITY · C# · <span data-i18n="puzzleLabel">2D puzzle</span>
+</p>
+<h3 id="chromble-title">Chromble</h3>
+<p data-i18n="solo" class="project-role">Independent project · Solo developer</p>
+<p data-i18n="chrombleLead" class="project-lead">Simple moves. Cascading consequences.</p>
+<p data-i18n="chrombleIntro">An 8 × 8 color puzzle: place a piece, connect six matching blocks and let gravity trigger the next cascade.</p>
+<dl class="project-facts">
+<div>
+<dt data-i18n="coreLabel">Game logic</dt>
+<dd data-i18n="chrombleCore">A C# core independent of Unity; presentation reacts to game events.</dd>
+</div>
+<div>
+<dt data-i18n="generationLabel">Adaptive generation</dt>
+<dd data-i18n="chrombleGeneration">Piece selection considers board occupancy and the number of valid placements.</dd>
+</div>
+</dl>
+<div class="actions">
+<a class="text-link" href="https://yandex.ru/games/app/562818" target="_blank" rel="noopener noreferrer"><span data-i18n="chromblePlay">Play on Yandex Games</span> <span aria-hidden="true">&#8599;</span></a>
+</div>
+<details class="breakdown">
+<summary>
+<span data-i18n="chrombleDetails">Inside the game logic</span>
+<span class="expand" aria-hidden="true">+</span>
+</summary>
+<div class="breakdown-body">
+<p data-i18n="chrombleDetail1">BoardModel handles placement, gravity and connected color groups. BoardResolver computes the cascade sequence; effects and sound follow its events.</p>
+<ol class="pipeline">
+<li data-i18n="chrombleStep1">Evaluate the board</li>
+<li data-i18n="chrombleStep2">Choose a shape and color</li>
+<li data-i18n="chrombleStep3">Resolve the cascade</li>
+</ol>
+<p data-i18n="chrombleDetail2">When space becomes scarce, SpawnDirector favors pieces with more valid placements or searches for a shape, color and position that clears more blocks. This is a rule-based heuristic.</p>
+<p data-i18n="chrombleDetail3">The next piece can be picked up during a cascade, but placement waits until the board settles. Preview calculations do not change the live board.</p>
+</div>
+</details>
+</div>
+</article>
+</section>
+<section class="section experience-section" id="experience">
+<div class="container">
+<div class="section-heading">
+<div>
+<span class="eyebrow">02 / <span data-i18n="experienceLabel">Commercial experience</span>
+</span>
+<h2 data-i18n="experience">Where disciplines meet.</h2>
+</div>
+</div>
+<div class="experience-intro">
+<div>
+<p class="eyebrow">UNITY DEVELOPER</p>
+<h3>Bulltraffic</h3>
+<p data-i18n="bullContext" class="muted">Mobile game · team development</p>
+</div>
+<div>
+<p data-i18n="bullIntro" class="experience-lead">I was responsible for the technical implementation of the project’s visuals in Unity, bringing together the work of artists and animators.</p>
+<ul class="experience-list">
+<li data-i18n="bull1">Custom URP rendering passes, procedural materials, shaders and VFX.</li>
+<li data-i18n="bull2">Content integration and organization of the Unity project.</li>
+<li data-i18n="bull3">Profiling on iOS and Android with Profiler, Memory Profiler and Frame Debugger.</li>
+</ul>
+</div>
+</div>
+<div class="vfx-heading">
+<h4 data-i18n="vfxHeading">Selected real-time effects</h4>
+<a class="text-link" href="https://www.artstation.com/rusleo" target="_blank" rel="noopener noreferrer">ArtStation ↗</a>
+</div>
+<div class="vfx-grid">
+<a class="vfx-item" href="https://www.youtube.com/watch?v=v-npzKpGGV8" data-video="v-npzKpGGV8">
+<div class="vfx-preview">
+<img src="assets/img/portfolio/fire.webp" width="960" height="540" loading="lazy" alt=""/>
+<span class="play-icon" aria-hidden="true">▷</span>
+</div>
+<div class="vfx-caption">
+<h5 data-i18n="vfxfire">Fire Impact</h5>
+<span class="muted">Unity / URP</span>
+</div>
+<span class="sr-only">
+<span data-i18n="watch">Watch video</span>
+</span>
+</a>
+<a class="vfx-item" href="https://www.youtube.com/watch?v=HFzsk558dPo" data-video="HFzsk558dPo">
+<div class="vfx-preview">
+<img src="assets/img/portfolio/heal.webp" width="960" height="540" loading="lazy" alt=""/>
+<span class="play-icon" aria-hidden="true">▷</span>
+</div>
+<div class="vfx-caption">
+<h5 data-i18n="vfxheal">Healing Spell</h5>
+<span class="muted">Unity / URP</span>
+</div>
+<span class="sr-only">
+<span data-i18n="watch">Watch video</span>
+</span>
+</a>
+<a class="vfx-item" href="https://www.youtube.com/watch?v=s4bNwzBxY3g" data-video="s4bNwzBxY3g">
+<div class="vfx-preview">
+<img src="assets/img/portfolio/thunder.webp" width="960" height="540" loading="lazy" alt=""/>
+<span class="play-icon" aria-hidden="true">▷</span>
+</div>
+<div class="vfx-caption">
+<h5 data-i18n="vfxthunder">Thunder Strike</h5>
+<span class="muted">Unity / URP</span>
+</div>
+<span class="sr-only">
+<span data-i18n="watch">Watch video</span>
+</span>
+</a>
+</div>
+<p data-i18n="bullNote" class="media-caption">The project is on hold. These effects are shared with permission.</p>
+</div>
+</section>
+<section class="section container" id="code">
+<div class="section-heading">
+<div>
+<span class="eyebrow">03 / <span data-i18n="engineeringLabel">Engineering notes</span>
+</span>
+<h2 data-i18n="engineering">A closer look at the systems.</h2>
+</div>
+</div>
+<article class="engineering-row">
+<div class="engineering-title">
+<p class="eyebrow">01 / <span data-i18n="spatialLabel">Spatial algorithms</span>
+</p>
+<h3>Voxel<br>Pathfinding</h3>
+<a class="text-link" href="https://github.com/razrabVkedah/voxel-pathfinding" target="_blank" rel="noopener noreferrer">
+<span data-i18n="source">Source on GitHub</span> ↗</a>
+</div>
+<div class="engineering-copy">
+<p data-i18n="voxelIntro" class="engineering-lead">3D navigation through an adaptive representation of space. Cells near geometry are subdivided; free cells become a graph for route search.</p>
+<ol class="pipeline">
+<li data-i18n="voxelStep1">Subdivide space</li>
+<li data-i18n="voxelStep2">Build the graph</li>
+<li data-i18n="voxelStep3">Refine the route</li>
+</ol>
+<details class="breakdown">
+<summary>
+<span data-i18n="voxelDetails">Representation and trade-offs</span>
+<span class="expand" aria-hidden="true">+</span>
+</summary>
+<div class="breakdown-body">
+<p data-i18n="voxelDetail1">Subdivision creates eight child cells with face-based adjacency. Route processing uses intersections with cell faces before the demo agent follows a smoothed path.</p>
+<p data-i18n="voxelDetail2">Finer cells describe geometry more precisely but grow the graph. The current search sorts a list of open nodes; this implementation is an exploration of spatial navigation, not a benchmarked high-performance solver.</p>
+</div>
+</details>
+</div>
+</article>
+<article class="engineering-row">
+<div class="engineering-title">
+<p class="eyebrow">02 / <span data-i18n="networkLabel">Network states</span>
+</p>
+<h3>Socket.IO<br>Networking</h3>
+<a class="text-link" href="https://github.com/razrabVkedah/socketio-networking" target="_blank" rel="noopener noreferrer">
+<span data-i18n="source">Source on GitHub</span> ↗</a>
+</div>
+<div class="engineering-copy">
+<p data-i18n="networkIntro" class="engineering-lead">A Unity synchronization layer with RPCs, network variables and buffered transform states. Updates are batched into ticks; remote motion uses delayed interpolation.</p>
+<ol class="pipeline">
+<li data-i18n="networkStep1">Collect changes</li>
+<li data-i18n="networkStep2">Send on a tick</li>
+<li data-i18n="networkStep3">Interpolate states</li>
+</ol>
+<details class="breakdown">
+<summary>
+<span data-i18n="networkDetails">Data flow and boundaries</span>
+<span class="expand" aria-hidden="true">+</span>
+</summary>
+<div class="breakdown-body">
+<p data-i18n="networkDetail1">Attributes register RPCs; generic network variables define state. HostToClient, ClientToHost and Both control update direction, while Calm and Forced distinguish sending modes.</p>
+<p data-i18n="networkDetail2">Running the project requires the paid Best Socket.IO transport and a separate server, which is not in the repository. Prediction and reconciliation are not implemented features.</p>
+</div>
+</details>
+</div>
+</article>
+<aside class="tools-row">
+<div>
+<p class="eyebrow">
+<span data-i18n="toolsLabel">Unity tooling</span>
+</p>
+<h3>Utils</h3>
+</div>
+<p data-i18n="utils">Reusable runtime and editor tools: extensible logging, a metrics HUD, splines and editor shortcuts. Packaged for UPM.</p>
+<a class="text-link" href="https://github.com/razrabVkedah/utils" target="_blank" rel="noopener noreferrer">
+<span data-i18n="viewCode">View code</span> ↗</a>
+</aside>
+</section>
+<section class="contact-section" id="contact">
+<div class="container contact-layout">
+<div>
+<p class="eyebrow">04 / <span data-i18n="next">WHAT’S NEXT</span>
+</p>
+<h2 data-i18n="contactTitle">Let’s build something worth playing.</h2>
+<p data-i18n="contactIntro">I’m looking to join a team building an ambitious game, with room for thoughtful engineering and collaboration.</p>
+<p data-i18n="languages" class="media-caption">Russian — native · English — B2</p>
+</div>
+<div class="contact-links">
+<a class="contact-link" href="https://t.me/razrab_v_kedah" target="_blank" rel="noopener noreferrer">
+<span>Telegram<small>@razrab_v_kedah</small>
+</span>
+<span aria-hidden="true">↗</span>
+</a>
+<a class="contact-link" href="mailto:leonrusgamedev2004@yandex.ru">
+<span>Email<small>leonrusgamedev2004@yandex.ru</small>
+</span>
+<span aria-hidden="true">↗</span>
+</a>
+<a class="contact-link" href="assets/Ruslan_Unity_Developer_CV.pdf">
+<span>
+<span data-i18n="download">Download resume</span>
+<small>PDF / EN</small>
+</span>
+<span aria-hidden="true">↓</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="container site-footer">
+<span>© <span id="year">2026</span> Rusleo</span>
+<a class="text-link" href="#top">
+<span data-i18n="backTop">Back to top</span> ↑</a>
+</footer>
+<dialog class="media-dialog" aria-labelledby="media-title">
+<div class="dialog-toolbar">
+<h2 id="media-title">
+</h2>
+<button class="dialog-close" type="button" aria-label="Close" data-i18n-aria="close">×</button>
+</div>
+<div class="dialog-content">
+</div>
+<div class="dialog-footer">
+<button type="button" class="gallery-prev" data-i18n-aria="previous" aria-label="Previous image">←</button>
+<span class="gallery-count" aria-live="polite">
+</span>
+<button type="button" class="gallery-next" data-i18n-aria="nextImage" aria-label="Next image">→</button>
+<a class="video-external" target="_blank" rel="noopener noreferrer">
+<span data-i18n="openYoutube">Open on YouTube ↗</span>
+</a>
+</div>
+</dialog>
+<script src="data/text-en.js" defer>
+</script>
+<script src="data/text-ru.js" defer>
+</script>
+<script src="js/i18n.js" defer>
+</script>
+<script src="js/app.js" defer>
 </script>
 </body>
 </html>
