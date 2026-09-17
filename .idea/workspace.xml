@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c03a25ec-09bd-4b01-89af-584002935797" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Ruslan_Unity_Developer_CV.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Ruslan_Unity_Developer_CV.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/portfolio.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/portfolio.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/text-en.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/text-en.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/text-ru.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/text-ru.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
@@ -32,6 +32,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JavaScript Debug.index.html.executor": "Run",
     "Node.js.app.js.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
