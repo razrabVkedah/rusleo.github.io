@@ -1,17 +1,18 @@
 window.i18n = (() => {
     let currentLang = 'en';
-    function text(key) {
-        return window.textData[currentLang]?.[key] ?? window.textData.en[key] ?? key;
+    function text(key, fallback = key) {
+        return window.textData?.[currentLang]?.[key] ?? window.textData?.en?.[key] ?? fallback;
     }
     function apply(lang) {
         currentLang = lang === 'ru' ? 'ru' : 'en';
         document.documentElement.lang = currentLang;
         document.querySelectorAll('[data-i18n]').forEach(node => {
-            node.textContent = text(node.dataset.i18n);
+            node.textContent = text(node.dataset.i18n, node.textContent);
         });
         for (const attribute of ['alt', 'aria']) {
             document.querySelectorAll(`[data-i18n-${attribute}]`).forEach(node => {
-                node.setAttribute(attribute === 'aria' ? 'aria-label' : 'alt', text(node.getAttribute(`data-i18n-${attribute}`)));
+                const target = attribute === 'aria' ? 'aria-label' : 'alt';
+                node.setAttribute(target, text(node.getAttribute(`data-i18n-${attribute}`), node.getAttribute(target)));
             });
         }
         document.title = text('pageTitle');

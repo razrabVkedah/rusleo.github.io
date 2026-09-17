@@ -18,6 +18,8 @@ Open `http://127.0.0.1:8765/`.
 - `css/portfolio.css`: responsive layout, visible focus and reduced-motion support.
 - `data/text-en.js`, `data/text-ru.js`: matching flat translation dictionaries. Keep English HTML fallback text in sync when editing copy.
 - `js/i18n.js`: text, image alternatives, accessible labels, metadata and optional language persistence.
+
+The translation dictionaries and `js/i18n.js` have `?v=` content versions in both HTML pages. When changing these files, update their versions in `index.html` and `archive/index.html` (first 12 characters of the file's SHA-256) so returning visitors load the new files instead of cached copies.
 - `js/app.js`: language control and click-to-open image/video viewer. Images support arrows, Escape, focus containment and return. Video embeds are created only after a click and removed on close.
 - `assets/img/chromble/`, `assets/img/portfolio/`: optimized images used by the current page, including its favicon and social preview.
 - `assets/img/fireline-zombies/`: six current screenshots and two thumbnail copies. Full gallery frames are requested on demand; the page shows combat, defense setup and the arsenal.

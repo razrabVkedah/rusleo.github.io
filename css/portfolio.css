@@ -45,7 +45,38 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 html[lang=ru] .lang-en { color: #77796f; }
 .hero { display: grid; grid-template-columns: 1.55fr 1fr; gap: 64px; align-items: center; padding-block: 56px 36px; }
 .hero h1 { font-size: clamp(68px,7.5vw,108px); line-height: .98; letter-spacing: -.065em; margin: 22px 0 26px; }
-.hero h1 span { color: var(--accent); }
+.hero-word { --glitch-color: var(--accent); position: relative; display: inline-block; white-space: nowrap; }
+.hero-word--accent { color: var(--accent); --glitch-color: var(--text); }
+.hero-letter { position: relative; }
+.hero-letter.is-glitching { animation: hero-letter-glitch 660ms steps(1, end) both; }
+.hero-word::before, .hero-word::after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+.hero-word::before { color: #63e6df; --slice-shift: -.075em; }
+.hero-word::after { color: #ff647c; --slice-shift: .075em; }
+.has-glitch .hero-word::before, .has-glitch .hero-word::after {
+    animation: hero-glitch-slice 660ms steps(1, end) both;
+}
+.has-glitch .hero-word::after { animation-direction: reverse; }
+@keyframes hero-glitch-slice {
+    0%, 36%, 72%, 100% { opacity: 0; transform: none; clip-path: inset(0 0 100%); }
+    10% { opacity: 1; transform: translateX(var(--slice-shift)); clip-path: inset(18% 0 58%); }
+    22% { opacity: 1; transform: translateX(calc(var(--slice-shift) * -1)); clip-path: inset(58% 0 16%); }
+    52% { opacity: 1; transform: translateX(var(--slice-shift)); clip-path: inset(42% 0 38%); }
+    64% { opacity: 1; transform: translateX(calc(var(--slice-shift) * -.5)); clip-path: inset(72% 0 8%); }
+}
+@keyframes hero-letter-glitch {
+    0%, 100% { color: inherit; left: 0; top: 0; text-shadow: none; }
+    12% { color: var(--glitch-color); left: -.025em; top: .015em; text-shadow: -.045em 0 #63e6df, .045em 0 #ff647c; }
+    28% { color: var(--glitch-color); left: .02em; top: -.015em; text-shadow: .025em 0 #63e6df, -.025em 0 #ff647c; }
+    40% { color: var(--glitch-color); left: 0; top: 0; text-shadow: none; }
+    56% { color: var(--glitch-color); left: -.015em; top: 0; text-shadow: -.035em 0 #63e6df, .035em 0 #ff647c; }
+    72% { color: var(--glitch-color); left: 0; top: 0; text-shadow: none; }
+}
 .hero-focus { font-size: 20px; letter-spacing: -.02em; }
 .hero-intro { color: var(--muted); max-width: 490px; font-size: 16px; line-height: 1.7; margin-top: 12px; }
 .hero-copy > .eyebrow { font-size: 12px; }
