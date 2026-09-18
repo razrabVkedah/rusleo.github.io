@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c03a25ec-09bd-4b01-89af-584002935797" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archive/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/archive/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Ruslan_Unity_Developer_CV.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Ruslan_Unity_Developer_CV.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/text-en.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/text-en.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/text-ru.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/text-ru.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/resume.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/resume.html" afterDir="false" />
-    </list>
+    <list default="true" id="c03a25ec-09bd-4b01-89af-584002935797" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,7 +79,7 @@
       <workItem from="1785576967104" duration="1689000" />
       <workItem from="1789578210255" duration="3882000" />
       <workItem from="1789592191250" duration="3311000" />
-      <workItem from="1789718623645" duration="4873000" />
+      <workItem from="1789718623645" duration="5197000" />
     </task>
     <servers />
   </component>
