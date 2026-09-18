@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c03a25ec-09bd-4b01-89af-584002935797" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/archive/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/Ruslan_Unity_Developer_CV.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Ruslan_Unity_Developer_CV.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/portfolio.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/portfolio.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/text-en.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/text-en.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/text-ru.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/text-ru.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/resume.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/resume.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,23 +33,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JavaScript Debug.index.html.executor": "Run",
-    "Node.js.app.js.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "E:/rusleo.github.io/_temp/archieves",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.app.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/rusleo.github.io/_temp/archieves&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\rusleo.github.io\_temp\archieves" />
@@ -85,6 +88,7 @@
       <workItem from="1785576967104" duration="1689000" />
       <workItem from="1789578210255" duration="3882000" />
       <workItem from="1789592191250" duration="3311000" />
+      <workItem from="1789718623645" duration="4873000" />
     </task>
     <servers />
   </component>

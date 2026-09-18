@@ -1,0 +1,150 @@
+/* Page-specific layout; the portfolio's tokens and controls are shared. */
+.mentoring-page { overflow-wrap: anywhere; }
+.mentoring-page main div, .mentoring-page article { min-width: 0; }
+.mentoring-page .topbar { height: auto; min-height: 88px; flex-wrap: wrap; }
+.mentoring-page .topbar nav { flex-wrap: wrap; }
+.mentoring-page .button { max-width: 100%; }
+.mentoring-page .nav-link { min-height: 44px; display: inline-flex; align-items: center; }
+.mentoring-hero { display: grid; grid-template-columns: 1.5fr 1fr; gap: 80px; align-items: center; padding-block: 64px 76px; }
+.mentoring-hero h1 { font-size: clamp(58px, 6.2vw, 88px); line-height: 1.02; letter-spacing: -.055em; margin: 24px 0; }
+.mentoring-hero h1 span { color: var(--accent); }
+.mentoring-lead { font-size: 21px; line-height: 1.5; max-width: 570px; }
+.mentoring-intro { color: var(--muted); max-width: 550px; margin-top: 18px; }
+.mentoring-intro strong { font-weight: 400; color: var(--text); }
+.mentoring-portrait { position: relative; margin-right: 14px; }
+.mentoring-portrait:before { content: ''; position: absolute; top: -15px; right: -15px; width: 55%; height: 55%; border-top: 1px solid var(--accent); border-right: 1px solid var(--accent); }
+.mentoring-portrait img { width: 100%; filter: saturate(.65); }
+.mentoring-portrait figcaption { display: flex; justify-content: space-between; gap: 12px; font: 11px/1.5 Consolas, monospace; color: var(--muted); margin-top: 18px; }
+.mentoring-portrait figcaption span { white-space: nowrap; }
+.mentoring-section { padding-block: 40px 64px; }
+.mentoring-projects { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+.mentoring-project h3 { font-size: 34px; letter-spacing: -.035em; margin: 12px 0 18px; }
+.mentoring-project > .eyebrow { margin-top: 26px; }
+.mentoring-project p:not(.eyebrow) { max-width: 520px; }
+.mentoring-project-note { color: var(--muted); font-size: 14px; }
+.mentoring-project .text-link { color: var(--accent); margin-top: 16px; min-height: 44px; display: inline-flex; align-items: center; gap: 20px; }
+.mentoring-chromble { display: flex; gap: 22px; padding: 24px 52px; background: var(--panel); border: 1px solid var(--line); }
+.mentoring-chromble a { min-width: 0; flex: 1; }
+.mentoring-chromble a:first-child { margin-bottom: 24px; }
+.mentoring-chromble a:last-child { margin-top: 24px; }
+.mentoring-chromble img { width: 100%; }
+.mentoring-fireline { display: grid; gap: 12px; }
+.mentoring-fireline img { width: 100%; }
+.mentoring-fireline a:last-child { width: 73%; justify-self: end; }
+.mentoring-bridge { display: flex; align-items: center; justify-content: space-between; gap: 40px; padding-top: 28px; margin-top: 32px; border-top: 1px solid var(--line); }
+.mentoring-bridge p { max-width: 720px; color: var(--muted); }
+.mentoring-bridge a { padding-block: 12px; }
+.mentoring-starts { display: grid; grid-template-columns: repeat(3,1fr); gap: 40px; }
+.mentoring-number { font: 13px Consolas, monospace; color: var(--accent); }
+.mentoring-starts h3 { font-size: 25px; line-height: 1.2; letter-spacing: -.025em; margin: 20px 0 16px; }
+.mentoring-starts p { color: var(--muted); font-size: 15px; }
+.mentoring-footnote { font-size: 13px; line-height: 1.7; color: var(--muted); margin-top: 28px; }
+.mentoring-example-band { background: var(--panel); padding-block: 64px; margin-block: 24px; }
+.mentoring-example { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.mentoring-example h2, .mentoring-parents h2, .mentoring-faq h2 { font-size: clamp(30px,3.2vw,44px); letter-spacing: -.045em; margin: 18px 0 24px; }
+.mentoring-example > div > p:not(.eyebrow) { color: var(--muted); }
+.mentoring-logic { list-style: none; padding: 0; margin: 28px 0 0; counter-reset: logic; }
+.mentoring-logic li { position: relative; padding: 16px 12px 16px 48px; border-top: 1px solid var(--line); counter-increment: logic; }
+.mentoring-logic li:before { content: '0' counter(logic); position: absolute; left: 0; top: 18px; color: var(--accent); font: 12px Consolas, monospace; }
+.mentoring-logic li > span { font: 11px Consolas, monospace; color: var(--muted); }
+.mentoring-logic h3 { font-size: 18px; margin-block: 8px; }
+.mentoring-logic p { font-size: 14px; color: var(--muted); }
+.mentoring-demo { border: 1px solid var(--line); padding: 28px; background: var(--bg); }
+.mentoring-demo-rule { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 22px 0 0; padding: 0; border: 0; min-width: 0; }
+.mentoring-demo-rule legend { padding: 0; margin-bottom: 4px; font-size: 13px; color: var(--muted); }
+.mentoring-demo-rule label { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; cursor: pointer; font-size: 14px; }
+.mentoring-demo-rule input { width: 18px; height: 18px; margin: 0; accent-color: var(--accent); }
+.mentoring-demo-rule input:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.mentoring-demo-rule input:checked + span { color: var(--accent); }
+.mentoring-scene { position: relative; height: 235px; margin-top: 24px; border: 1px solid var(--line); background: var(--panel); overflow: hidden; }
+.mentoring-score { position: absolute; inset: 18px 18px auto auto; font: 11px Consolas, monospace; color: var(--muted); }
+.mentoring-score span { font-size: 30px; color: var(--text); margin-left: 12px; }
+.mentoring-world { display: flex; align-items: end; justify-content: space-evenly; position: absolute; inset: auto 16px 44px; }
+.mentoring-player { display: block; position: relative; z-index: 1; width: 42px; height: 54px; background: var(--accent); border: 3px solid var(--text); }
+.mentoring-player:after { content: ''; position: absolute; width: 6px; height: 6px; background: var(--bg); top: 12px; right: 6px; }
+.mentoring-coin { width: 30px; height: 36px; display: grid; place-items: center; align-self: center; border: 2px solid var(--accent); border-radius: 50%; font: 16px Consolas, monospace; color: var(--accent); transition: opacity .2s, transform .2s; }
+.mentoring-coin.is-collected { opacity: 0; transform: translateY(-14px); }
+.mentoring-ground { position: absolute; inset: auto 0 25px; height: 19px; border-top: 2px solid var(--muted); background: repeating-linear-gradient(90deg,transparent 0 28px,var(--line) 28px 29px); }
+.mentoring-demo-status { min-height: 52px; margin-top: 20px; font-size: 14px; }
+.mentoring-demo-controls { display: flex; flex-wrap: wrap; gap: 12px; }
+.mentoring-demo-controls .button { font-size: 12px; padding-inline: 14px; background: transparent; }
+.mentoring-demo-controls .primary { background: var(--accent); }
+.mentoring-demo-controls .button:hover { background: var(--text); color: var(--bg); }
+.mentoring-demo-controls [aria-disabled=true] { background: var(--line); color: var(--text); border-color: var(--line); cursor: default; }
+.mentoring-demo-controls [aria-disabled=true]:hover { background: var(--line); color: var(--text); }
+.mentoring-process { display: grid; grid-template-columns: repeat(4,1fr); gap: 30px; list-style: none; padding: 0; counter-reset: process; }
+.mentoring-process li { border-top: 1px solid var(--line); padding-top: 18px; counter-increment: process; }
+.mentoring-process li:before { content: '0' counter(process); font: 13px Consolas, monospace; color: var(--accent); }
+.mentoring-process h3 { font-size: 19px; line-height: 1.25; margin: 18px 0 12px; }
+.mentoring-process p { font-size: 14px; color: var(--muted); }
+.mentoring-process-note { max-width: 780px; margin-top: 32px; color: var(--muted); }
+.mentoring-parents { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; padding: 44px; background: var(--panel); border: 1px solid var(--line); margin-block: 24px 40px; }
+.mentoring-parents p:not(.eyebrow) { font-size: 15px; color: var(--muted); }
+.mentoring-parent-points article + article { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--line); }
+.mentoring-parent-points h3 { font-size: 20px; margin-bottom: 12px; }
+.mentoring-faq { display: grid; grid-template-columns: 1fr 1.5fr; gap: 64px; }
+.mentoring-faq details { border-top: 1px solid var(--line); }
+.mentoring-faq details:last-child { border-bottom: 1px solid var(--line); }
+.mentoring-faq summary { cursor: pointer; padding: 22px 24px 22px 0; font-size: 17px; }
+.mentoring-faq details p { color: var(--muted); padding-bottom: 24px; }
+.mentoring-faq details a { color: var(--accent); text-decoration: underline; }
+.mentoring-page .site-footer { flex-wrap: wrap; padding-block: 16px; }
+.mentoring-page .site-footer a { padding-block: 12px; }
+@media (max-width: 1050px) {
+  .mentoring-hero { gap: 40px; }
+  .mentoring-projects { gap: 32px; }
+  .mentoring-chromble { padding: 24px; }
+  .mentoring-example, .mentoring-parents { gap: 36px; }
+  .mentoring-starts { gap: 26px; }
+  .mentoring-portrait figcaption { flex-direction: column; gap: 4px; }
+}
+@media (max-width: 800px) {
+  .mentoring-hero { grid-template-columns: 1.5fr 1fr; gap: 24px; }
+  .mentoring-hero h1 { font-size: 58px; }
+  .mentoring-lead { font-size: 18px; }
+  .mentoring-project h3 { font-size: 29px; }
+  .mentoring-chromble { padding: 18px; gap: 12px; }
+  .mentoring-starts { grid-template-columns: 1fr; }
+  .mentoring-starts article { display: grid; grid-template-columns: 28px 1fr 1.4fr; gap: 20px; border-top: 1px solid var(--line); padding-top: 22px; }
+  .mentoring-starts h3 { margin: 0; font-size: 22px; }
+  .mentoring-example { grid-template-columns: 1fr; }
+  .mentoring-demo { max-width: 560px; width: 100%; justify-self: center; }
+  .mentoring-process { grid-template-columns: 1fr 1fr; }
+  .mentoring-parents { padding: 30px; gap: 30px; }
+  .mentoring-faq { grid-template-columns: 1fr; gap: 16px; }
+}
+@media (max-width: 600px) {
+  .mentoring-page .topbar { gap: 8px; }
+  .mentoring-hero { grid-template-columns: minmax(0, 1fr) 80px; padding-block: 28px 36px; gap: 18px 20px; }
+  .mentoring-hero-copy { display: contents; }
+  .mentoring-hero-copy > * { grid-column: 1 / -1; }
+  .mentoring-hero h1 { font-size: clamp(48px,13vw,68px); margin: 0; }
+  .mentoring-hero .eyebrow { grid-column: 1; grid-row: 1; align-self: center; font-size: 11px; line-height: 1.8; letter-spacing: .08em; }
+  .mentoring-intro { font-size: 15px; }
+  .mentoring-hero .mentoring-intro { margin-top: 0; }
+  .mentoring-hero .actions { gap: 10px; margin-top: 4px; }
+  .mentoring-portrait { grid-column: 2; grid-row: 1; width: 74px; margin-right: 6px; justify-self: end; }
+  .mentoring-portrait:before { top: -6px; right: -6px; }
+  .mentoring-portrait figcaption { display: none; }
+  .mentoring-section { padding-block: 24px 36px; }
+  .mentoring-projects { grid-template-columns: 1fr; gap: 40px; }
+  .mentoring-chromble { padding: 22px 30px; gap: 18px; }
+  .mentoring-project h3 { font-size: 32px; }
+  .mentoring-bridge { display: block; margin-top: 22px; }
+  .mentoring-bridge p { font-size: 15px; }
+  .mentoring-bridge a { margin-top: 12px; }
+  .mentoring-starts article { grid-template-columns: 26px 1fr; gap: 14px; }
+  .mentoring-starts p { grid-column: 2; }
+  .mentoring-starts h3 br { display: none; }
+  .mentoring-example-band { padding-block: 36px; margin-block: 8px 16px; }
+  .mentoring-demo { padding: 20px; }
+  .mentoring-scene { height: 210px; }
+  .mentoring-demo-controls { flex-direction: column; }
+  .mentoring-process { gap: 22px; }
+  .mentoring-process h3 { font-size: 18px; }
+  .mentoring-process-note { font-size: 15px; }
+  .mentoring-parents { grid-template-columns: 1fr; padding: 24px; gap: 28px; margin-block: 12px 24px; }
+  .mentoring-parents h2 { font-size: 30px; }
+  .mentoring-faq summary { font-size: 16px; }
+  .mentoring-page .site-footer { gap: 4px 20px; }
+}

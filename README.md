@@ -38,10 +38,14 @@ Original ZIP builds, PDFs and PNGs stay in the ignored `_temp/archieves/` direct
 
 Chromble and Fireline are independent solo projects. Chromble links to Yandex Games; Fireline links to RuStore. The removed CrazyGames listing is no longer linked. No unconfirmed release date, performance metric or audience count is claimed. Bulltraffic is described through the confirmed Unity responsibilities and permitted VFX; confidential project footage is not included. Public code examples include their relevant implementation limits.
 
-The contact address is `leonrusgamedev2004@yandex.ru`. The existing PDF uses a different address and needs a separate content update.
+The contact address is `leonrusgamedev2004@gmail.com`. The resume source and PDF use the same address.
 
 ## Review checklist
 
 Check English and Russian at 1440, 1024, 768, 390 and 360 px; inspect expanded details and image dialogs. Verify language persistence, blocked storage, keyboard controls, media cleanup and no horizontal overflow. YouTube playback depends on external availability; every embed includes a direct YouTube link.
 
 `__CodexAgents` contains local research and review artifacts and is excluded from Git. Do not use it or `_temp` as a public asset source.
+
+## Mentoring
+
+`mentoring/index.html` is a Russian page for individual Unity and C# lessons, available at `/mentoring/` using the same preview server. It shares portfolio styles and images, with isolated additions in `css/mentoring.css` and `js/mentoring.js`. The coin illustration is progressively enhanced; content and FAQ work without JavaScript. The page does not read or change the portfolio language preference. Its social preview is `assets/img/mentoring/social.jpg`.
