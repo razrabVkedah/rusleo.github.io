@@ -34,6 +34,10 @@ Nine games have compact WebP thumbnails (about 175 KB combined); all 23 larger g
 
 Original ZIP builds, PDFs and PNGs stay in the ignored `_temp/archieves/` directory. There are no game players or SDK adapters in this implementation. When demos are ready, host their builds separately and add explicit play links to the archive cards. Do not copy game payloads into this portfolio repository.
 
+## C# portfolio
+
+`csharp/index.html` is a bilingual portfolio at `/csharp/`, linked through the direction navigation on the main page. It reuses `css/portfolio.css`, the portrait and the hero animation; `css/portfolio-nav.css` styles the shared direction links. English content works without JavaScript. `data/csharp-text.js` contains page-specific English and Russian dictionaries; `js/csharp.js` connects the language toggle to the shared `js/i18n.js` and language preference. When editing the dictionary, update its SHA-256 query version in the page and keep the English HTML fallback in sync. The page focuses on C# architecture, networking, algorithms and profiling. ASP.NET and Node.js experience is confirmed by the owner; no high-load backend, database, Kafka or automated-testing experience is inferred.
+
 ## Content boundaries
 
 Chromble and Fireline are independent solo projects. Chromble links to Yandex Games; Fireline links to RuStore. The removed CrazyGames listing is no longer linked. No unconfirmed release date, performance metric or audience count is claimed. Bulltraffic is described through the confirmed Unity responsibilities and permitted VFX; confidential project footage is not included. Public code examples include their relevant implementation limits.
